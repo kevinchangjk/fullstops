@@ -1,0 +1,7 @@
+#! /bin/zsh
+
+rm -f ~/.zshrc
+rm -f ~/.config/nvim/vimrc
+
+source ./zsh/zshlink
+source ./nvim/vimlink

@@ -2,7 +2,8 @@
 
 # key variables
 export REPOS="$HOME/ripples"
-export ZSH_DOTS="$REPOS/zsh"
+export DOTS="$REPOS/fullstops"
+export ZSH_DOTS="$DOTS/zsh"
 
 # zsh automagic completion
 autoload -U compinit
@@ -20,4 +21,4 @@ function setup() {
 setup
 # printf '\033[2J\033[3J\033[1;1H' # clears screen
 clear -x
-py "$ZSH_DOTS/quote/quotes.py"
+py "$DOTS/quote/quotes.py"

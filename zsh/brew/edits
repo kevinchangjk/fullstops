@@ -4,8 +4,8 @@ function ed() {
   case $1 in
   '.') v $ZSH_DOTS/brew/edits;;
   'g'|'git') v $HOME/.gitconfig;;
-  'v'|'nvim') v $ZSH_DOTS/nvim/vimrc;;
-  'z'|'zsh') v $REPOS/zsh/zshrc;;
+  'v'|'nvim') v $DOTS/nvim/vimrc;;
+  'z'|'zsh') v $ZSH_DOTS/zshrc;;
   *) echo "nothing happened.";;
   esac
 }

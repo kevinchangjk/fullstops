@@ -1,1 +1,3 @@
-ln -s $ZSH_DOTS/nvim/vimrc $VIM_CONFIG/vimrc
+#! /bin/zsh
+
+ln -s $DOTS/nvim/vimrc $VIM_CONFIG/vimrc

@@ -1,4 +1,3 @@
 #! /bin/zsh
 
-ZSH_DOTS="$HOME/ripples/zsh"
 ln -sf $ZSH_DOTS/zshrc $HOME/.zshrc

@@ -4,7 +4,7 @@ import textwrap
 import subprocess
 import random
 
-f = open('/Users/kevin/ripples/zsh/quote/quotes.json','r')
+f = open('/Users/kevin/ripples/fullstops/quote/quotes.json','r')
 data = json.load(f)
 f.close()
 tput = str(subprocess.check_output(['tput','cols']))
