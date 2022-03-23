@@ -1,0 +1,28 @@
+#! /bin/zsh
+
+# aliases
+alias vim="nvim"
+alias v="nvim"
+alias ct="printf '\033[2J\033[3J\033[1;1H'" # clear terminal
+alias gup="pass git push"
+alias ka="killall"
+alias mon="while; do; clear; lt; sleep 1; done" # monitor directory
+alias oc="octave"
+alias py="python3"
+alias yb="yarn build"
+alias yd="yarn dev"
+alias zr="exec $SHELL -l" # reloads shell
+alias snus="ssh-copy-id kevincjk@stu.comp.nus.edu.sg"
+alias 2030n="2on; cd Modules/CS2030S/notes; git pull origin; mkdocs serve"
+alias tm="tmux"
+alias td="tmux detach"
+alias tn="tmux new -s"
+alias ts="tmux ls"
+alias ta="tmux attach-session -t"
+
+# keybinds
+bindkey "^[[3~" delete-char
+bindkey '^[[Z' reverse-menu-complete
+
+# options
+unsetopt BEEP

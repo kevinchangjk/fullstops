@@ -1,0 +1,12 @@
+#! /bin/zsh 
+
+export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+export EDITOR=$VIM
+export MANPAGER='nvim +Man!'
+export VIM_CONFIG="$HOME/.config/nvim"
+export MYVIMRC="$VIM_CONFIG/vimrc"
+export VIMINIT=":source $MYVIMRC"
+
+# for alacritty DPI settings
+export WINIT_X11_SCALE_FACTOR=1

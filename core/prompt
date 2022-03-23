@@ -1,0 +1,13 @@
+#! /bin/zsh
+
+ARROW="> "
+
+function branch() {
+  b=$(git branch --show-current 2> /dev/null)
+  [[ ! -z $b ]] && echo "[$b]"
+}
+
+setopt prompt_subst
+
+PROMPT=$'%F{blue}%~ %F{241}$(branch)%f
+%(?.%F{green}$ARROW%f.%F{red}$ARROW%f)'

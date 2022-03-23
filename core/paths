@@ -1,0 +1,7 @@
+#! /bin/zsh
+
+# append
+path+=$HOME/.local/bin
+
+# prepend
+export PATH=$HOME/.yarn/bin:$PATH
