@@ -50,7 +50,7 @@ function gca() {
 # the laziest git function ever
 function gq() {
   git add .
-  git commit -m 'up'
+  git commit -m ${1-"update"}
   git push
 }
 
