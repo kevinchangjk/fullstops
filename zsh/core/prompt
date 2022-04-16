@@ -1,6 +1,6 @@
 #! /bin/zsh
 
-ARROW="-> "
+ARROW="--> "
 
 function branch() {
   b=$(git branch --show-current 2> /dev/null)
