@@ -1,8 +1,10 @@
 #! /bin/zsh
 
-# aliases
+# vim
 alias vim="nvim"
 alias v="nvim"
+
+# general
 alias ct="printf '\033[2J\033[3J\033[1;1H'" # clear terminal
 alias gup="pass git push"
 alias ka="killall"
@@ -12,17 +14,20 @@ alias py="python3"
 alias yb="yarn build"
 alias yd="yarn dev"
 alias zr="exec $SHELL -l" # reloads shell
-alias snus="ssh-copy-id kevincjk@stu.comp.nus.edu.sg"
-alias 2030n="2on; cd Modules/CS2030S/notes; git pull origin; mkdocs serve"
+
+# fuzzy finder
+alias ff='fzf -m -1 -0 --no-bold'
+alias fm='cd ${$(fd --type d --hidden --exclude .git | ff):-$(pwd)}'
+alias ft='fm; tn'
+alias fv='v $(ff)'
+
+# tmux shortcuts
 alias tm="tmux"
 alias td="tmux detach"
 alias tn="tmux new -s"
 alias ts="tmux ls"
 alias ta="tmux attach-session -t"
 
-# keybinds
-bindkey "^[[3~" delete-char
-bindkey '^[[Z' reverse-menu-complete
-
-# options
-unsetopt BEEP
+# NUS specific
+alias snus="ssh-copy-id kevincjk@stu.comp.nus.edu.sg"
+alias 2030n="2on; cd Modules/CS2030S/notes; git pull origin; mkdocs serve"
