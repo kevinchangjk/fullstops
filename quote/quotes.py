@@ -9,7 +9,7 @@ data = json.load(f)
 f.close()
 tput = str(subprocess.check_output(['tput','cols']))
 width = int(tput.split("\'")[1].split("\\")[0]) - 4
-c = random.randrange(1651)
+c = random.randrange(len(data))
 
 wrapped = textwrap.wrap(data[c]['text'],width)
 wrapped = ["  "+x for x in wrapped]
