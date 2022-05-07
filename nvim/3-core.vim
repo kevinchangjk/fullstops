@@ -27,6 +27,6 @@ set signcolumn=yes
 
 " colour scheme
 set colorcolumn=80
-highlight ColorColumn ctermbg=0 guibg=lightgrey
+highlight ColorColumn ctermbg=238 guibg=lightgrey
 highlight Normal ctermbg=none
 highlight NonText ctermbg=none
