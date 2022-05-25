@@ -21,9 +21,7 @@ Plug 'prettier/vim-prettier', {
 Plug 'ThePrimeagen/vim-be-good'
 Plug 'ackyshake/VimCompletesMe'
 Plug 'nvim-lualine/lualine.nvim'
-Plug 'ryanoasis/nerd-fonts'
 Plug 'kyazdani42/nvim-web-devicons'
-Plug 'ryanoasis/vim-devicons'
 Plug 'psliwka/vim-smoothie'
 Plug 'sheerun/vim-polyglot'
  
