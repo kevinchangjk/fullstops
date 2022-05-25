@@ -8,5 +8,7 @@ export VIM_CONFIG="$HOME/.config/nvim"
 export MYVIMRC="$VIM_CONFIG/vimrc"
 export VIMINIT=":source $MYVIMRC"
 
-# for alacritty DPI settings
-export WINIT_X11_SCALE_FACTOR=1
+# for nvm
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
