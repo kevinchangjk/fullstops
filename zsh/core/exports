@@ -8,6 +8,7 @@ export VIM_CONFIG="$HOME/.config/nvim"
 export MYVIMRC="$VIM_CONFIG/vimrc"
 export VIMINIT=":source $MYVIMRC"
 export GOPATH=$(go env GOPATH)
+export GOBIN=$GOPATH/bin
 
 # for nvm
 export NVM_DIR="$HOME/.nvm"
