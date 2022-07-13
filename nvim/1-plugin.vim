@@ -25,6 +25,7 @@ Plug 'kyazdani42/nvim-web-devicons'
 Plug 'psliwka/vim-smoothie'
 Plug 'sheerun/vim-polyglot'
 Plug 'rust-lang/rust.vim'
+Plug 'wakatime/vim-wakatime'
 
 call plug#end()
 
