@@ -7,4 +7,4 @@ path+=$HOME/.local/bin
 export PATH=$HOME/.yarn/bin:$PATH
 
 # golang
-export PATH=$PATH:$(go env GOPATH)/bin
+export PATH=$PATH:$(go env GOBIN)
