@@ -12,6 +12,22 @@ vnoremap <leader>y "+y
 nnoremap <silent> [[ :call searchpair('\[', '', '\]', 'b')<cr>
 nnoremap <silent> ]] :call searchpair('\[', '', '\]')<cr>
 
+" jump to start and end of line
+nnoremap H ^
+nnoremap J G
+nnoremap K gg
+nnoremap L $
+vnoremap H ^
+vnoremap J G
+vnoremap K gg
+vnoremap L $
+
+" remap to join lines
+nnoremap G :join<cr>
+nnoremap gg :join!<cr>
+vnoremap G :join<cr>
+vnoremap gg :join!<cr>
+
 " navigate windows
 nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
