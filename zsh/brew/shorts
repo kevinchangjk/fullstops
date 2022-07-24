@@ -27,6 +27,7 @@ alias td="tmux detach"
 alias tn="tmux new -s"
 alias ts="tmux ls"
 alias ta="tmux attach-session -t"
+alias tk="tmux kill-session -t"
 
 # NUS specific
 alias snus="ssh-copy-id kevincjk@stu.comp.nus.edu.sg"
