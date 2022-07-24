@@ -13,6 +13,7 @@ alias gr="git number reset"
 alias gitm="v .gitmodules"
 # alias gp="git number -c $VIM" # git preview
 alias gp="git push"
+alias gpu="git push -u origin HEAD"
 alias gcan="git commit --amend --no-edit"
 
 alias gap="git number add -p"
