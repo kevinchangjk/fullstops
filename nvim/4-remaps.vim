@@ -13,14 +13,10 @@ nnoremap <silent> [[ :call searchpair('\[', '', '\]', 'b')<cr>
 nnoremap <silent> ]] :call searchpair('\[', '', '\]')<cr>
 
 " jump to start and end of line
-nnoremap H ^
-nnoremap J G
-nnoremap K gg
-nnoremap L $
-vnoremap H ^
-vnoremap J G
-vnoremap K gg
-vnoremap L $
+noremap H ^
+noremap J G
+noremap K gg
+noremap L $
 
 " remap to join lines
 nnoremap G :join<cr>
