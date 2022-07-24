@@ -6,6 +6,7 @@ function ed() {
   'g'|'git') v $HOME/.gitconfig;;
   'v'|'nvim') v $DOTS/nvim/vimrc;;
   'z'|'zsh') v $ZSH_DOTS/zshrc;;
+  'a' | 'ags') v $HOME/.config/ags/scanlist;;
   *) echo "nothing happened.";;
   esac
 }
