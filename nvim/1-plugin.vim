@@ -12,6 +12,7 @@ Plug 'BurntSushi/ripgrep'
 Plug 'flazz/vim-colorschemes'
 Plug 'mbbill/undotree'
 Plug 'preservim/nerdtree'
+Plug 'nvim-treesitter/nvim-treesitter'
 Plug 'neovim/nvim-lspconfig'
 Plug 'leafgarland/typescript-vim'
 Plug 'tomlion/vim-solidity'
@@ -28,4 +29,3 @@ Plug 'rust-lang/rust.vim'
 Plug 'wakatime/vim-wakatime'
 
 call plug#end()
-

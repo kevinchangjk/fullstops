@@ -43,11 +43,3 @@ opt.showmode = false
 opt.showmatch = true
 opt.spelllang = "en_us"
 opt.termguicolors = true
-
--- colour scheme
-opt.colorcolumn = '80'
-vim.cmd([[
-  highlight ColorColumn ctermbg=238 guibg=lightgrey
-  highlight Normal ctermbg=none
-  highlight NonText ctermbg=none
-  ]])

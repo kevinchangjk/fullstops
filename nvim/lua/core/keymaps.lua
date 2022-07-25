@@ -1,8 +1,11 @@
 -- sets leader as the space key
 vim.g.mapleader = " "
 
+-- noremap function as global variable
+Map = {}
+
 -- function to build noremap functions
-local noremap = function(mode)
+function Map.noremap(mode)
 	return function(lhs, rhs, verbose)
 		if type(rhs) == "string" then
 			vim.api.nvim_set_keymap(mode, lhs, rhs, {
@@ -19,9 +22,9 @@ local noremap = function(mode)
 	end
 end
 
-local anoremap = noremap("")
-local nnoremap = noremap("n")
-local vnoremap = noremap("v")
+local anoremap = Map.noremap("")
+local nnoremap = Map.noremap("n")
+local vnoremap = Map.noremap("v")
 
 -- no-ops
 nnoremap("<space>", "")
