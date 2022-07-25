@@ -5,7 +5,8 @@ export LC_ALL=en_US.UTF-8
 
 # nvim stuff
 export XDG_CONFIG_HOME="$DOTS"
-export EDITOR=$VIM
+export NVIM="nvim"
+export EDITOR=$NVIM
 export MANPAGER='nvim +Man!'
 export VIM_CONFIG="$HOME/.config/nvim"
 
