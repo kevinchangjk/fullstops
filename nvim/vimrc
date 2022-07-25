@@ -1,9 +1,0 @@
-" run all .vim files in nvim folder
-for f in split(glob('$DOTS/nvim/*.vim'), '\n')
-    exe 'source' f
-endfor
-
-" run all .lua files in nvim folder
-for f in split(glob('$DOTS/nvim/*.lua'), '\n')
-    exe 'source' f
-endfor
