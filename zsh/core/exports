@@ -2,11 +2,15 @@
 
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
-export EDITOR=$VIM
+
+# nvim stuff
+export XDG_CONFIG_HOME="$HOME/.config"
+export NVIM="nvim"
+export EDITOR=$NVIM
 export MANPAGER='nvim +Man!'
-export VIM_CONFIG="$HOME/.config/nvim"
-export MYVIMRC="$VIM_CONFIG/vimrc"
-export VIMINIT=":source $MYVIMRC"
+export VIM_CONFIG="$XDG_CONFIG_HOME/nvim"
+
+# go
 export GOPATH=$(go env GOPATH)
 export GOBIN=$(go env GOBIN)
 

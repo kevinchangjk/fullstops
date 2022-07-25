@@ -1,4 +1,3 @@
 #! /bin/zsh
 
 ln -sf $ZSH_DOTS/zshrc $HOME/.zshrc
-ln -sf $ZSH_DOTS/tmux.conf $HOME/.tmux.conf

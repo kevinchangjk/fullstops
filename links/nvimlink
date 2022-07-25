@@ -1,0 +1,3 @@
+#! /bin/zsh
+
+ln -sf $DOTS/nvim $XDG_CONFIG_HOME/nvim

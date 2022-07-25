@@ -1,8 +1,8 @@
 #! /bin/zsh
 
 # vim
-alias vim="nvim"
-alias v="nvim"
+alias vim=$NVIM
+alias v=$NVIM
 
 # general
 alias ct="printf '\033[2J\033[3J\033[1;1H'" # clear terminal
@@ -31,4 +31,3 @@ alias tk="tmux kill-session -t"
 
 # NUS specific
 alias snus="ssh-copy-id kevincjk@stu.comp.nus.edu.sg"
-alias 2030n="2on; cd Modules/CS2030S/notes; git pull origin; mkdocs serve"
