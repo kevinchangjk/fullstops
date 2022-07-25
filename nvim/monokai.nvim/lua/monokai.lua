@@ -226,7 +226,7 @@ M.load_syntax = function(palette)
       bg = palette.base2,
     },
     MatchParen = {
-      fg = palette.pink,
+      fg = palette.orange,
     },
     Question = {
       fg = palette.yellow,
@@ -248,10 +248,10 @@ M.load_syntax = function(palette)
       style = 'bold',
     },
     VertSplit = {
-      fg = palette.brown,
+      fg = palette.base4,
     },
     LineNr = {
-      fg = palette.base5,
+      fg = palette.base7,
       bg = palette.base2,
     },
     SignColumn = {
@@ -260,11 +260,11 @@ M.load_syntax = function(palette)
     },
     StatusLine = {
       fg = palette.base7,
-      bg = palette.base3,
+      bg = palette.base2,
     },
     StatusLineNC = {
       fg = palette.grey,
-      bg = palette.base3,
+      bg = palette.base2,
     },
     Tabline = {},
     TabLineFill = {},
@@ -668,17 +668,19 @@ M.load_plugin_syntax = function(palette)
     },
     TelescopeNormal = {
       fg = palette.base8,
-      bg = palette.base0,
     },
     TelescopeSelection = {
       fg = palette.white,
       style = 'bold',
+      bg = palette.base4,
     },
     TelescopeSelectionCaret = {
-      fg = palette.green,
+      fg = palette.base8,
+      style = 'bold',
+      bg = palette.base4,
     },
     TelescopeMultiSelection = {
-      fg = palette.pink,
+      fg = palette.orange,
     },
     TelescopeMatching = {
       fg = palette.aqua,
