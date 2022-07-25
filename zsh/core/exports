@@ -8,8 +8,6 @@ export XDG_CONFIG_HOME="$DOTS"
 export EDITOR=$VIM
 export MANPAGER='nvim +Man!'
 export VIM_CONFIG="$HOME/.config/nvim"
-# export MYVIMRC="$VIM_CONFIG/vimrc"
-# export VIMINIT=":source $MYVIMRC"
 
 # go
 export GOPATH=$(go env GOPATH)
