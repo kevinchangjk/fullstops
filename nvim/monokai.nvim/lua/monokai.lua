@@ -118,6 +118,35 @@ M.ristretto = {
   diff_text = '#23324d',
 }
 
+M.phantom = {
+  name = 'monokai_phantom',
+  base0 = '#222426',
+  base1 = '#211F22',
+  base2 = '#26292C',
+  base3 = '#2E323C',
+  base4 = '#333842',
+  base5 = '#4d5154',
+  base6 = '#72696A',
+  base7 = '#B1B1B1',
+  base8 = '#e3e3e1',
+  border = '#7F928E',
+  brown = '#644723',
+  white = '#f6f6ec',
+  grey = '#72696A',
+  black = '#000000',
+  pink = '#FF2F84',
+  green = '#AAF731',
+  aqua = '#78DCE8',
+  yellow = '#FDFF8B',
+  orange = '#FFAD64',
+  purple = '#B081FF',
+  red = '#FF1B1B',
+  diff_add = '#3d5213',
+  diff_remove = '#4a0f23',
+  diff_change = '#27406b',
+  diff_text = '#23324d',
+}
+
 local function remove_italics(config, colors)
   if not config.italics and colors.style == 'italic' then
     colors.style = nil
