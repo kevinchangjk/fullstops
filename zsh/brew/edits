@@ -4,7 +4,7 @@ function ed() {
   case $1 in
   '.') v $ZSH_DOTS/brew/edits;;
   'g'|'git') v $HOME/.gitconfig;;
-  'v'|'nvim') v $DOTS/nvim/vimrc;;
+  'v'|'nvim') v $DOTS/nvim/lua/core/set.lua;;
   'z'|'zsh') v $ZSH_DOTS/zshrc;;
   'a' | 'ags') v $HOME/.config/ags/scanlist;;
   *) echo "nothing happened.";;

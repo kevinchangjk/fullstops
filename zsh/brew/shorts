@@ -31,4 +31,3 @@ alias tk="tmux kill-session -t"
 
 # NUS specific
 alias snus="ssh-copy-id kevincjk@stu.comp.nus.edu.sg"
-alias 2030n="2on; cd Modules/CS2030S/notes; git pull origin; mkdocs serve"
