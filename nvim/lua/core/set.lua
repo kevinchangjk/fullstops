@@ -4,8 +4,8 @@ local opt = vim.opt
 
 -- main settings for nvim
 opt.ruler = true
-opt.nu = true
 opt.relativenumber = true
+opt.nu = true
 opt.wrap = false
 opt.hidden = true
 vim.cmd([[

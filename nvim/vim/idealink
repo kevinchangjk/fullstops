@@ -1,0 +1,3 @@
+#! /bin/zsh
+
+ln -sf $DOTS/nvim/vim/idea.vim ~/.ideavimrc
