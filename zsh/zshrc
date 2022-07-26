@@ -19,6 +19,10 @@ function setup() {
 }
 
 setup
+
+# use vim keybindings in shell
+bindkey -v
+
 # printf '\033[2J\033[3J\033[1;1H' # clears screen
 clear -x
 py "$DOTS/quote/quotes.py"
