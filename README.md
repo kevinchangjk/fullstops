@@ -22,7 +22,19 @@ There's also a rather handy file, `zsh_cheatsheet.md`, which as the name suggest
 
 ## Neovim
 
-The `nvim` directory is basically my `.vimrc`. My vim hidden files, plugins and all, are stored somewhere else in my local machine.
+The `nvim` directory is basically my `.vimrc`. My vim hidden files, plugins and all, are stored somewhere else in my local machine, under `$XDG_CONFIG_HOME`, though for me that directory is basically a symlink of this directory.
+
+## Tmux
+
+Terminal Multiplexer. Basically contains some configs.
+
+## Kitty
+
+An alternative terminal. Also contains some configs, and a nice background image for the terminal.
+
+## Links
+
+Basically symlinks for my other components to their required locations.
 
 ## Quote
 
