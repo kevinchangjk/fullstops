@@ -10,7 +10,10 @@ As of now, these are the available components in my configs:
 
 1. [Shell](#shell)
 2. [Neovim](#neovim)
-3. [Quote](#quote)
+3. [Tmux](#tmux)
+4. [Kitty](#kitty)
+5. [Links](#links)
+6. [Quote](#quote)
 
 ## Shell
 
@@ -24,13 +27,15 @@ There's also a rather handy file, `zsh_cheatsheet.md`, which as the name suggest
 
 The `nvim` directory is basically my `.vimrc`. My vim hidden files, plugins and all, are stored somewhere else in my local machine, under `$XDG_CONFIG_HOME`, though for me that directory is basically a symlink of this directory.
 
+I stole the color scheme (which matches my kitty and tmux colors) from [here](https://github.com/ful1e5/onedark.nvim).
+
 ## Tmux
 
-Terminal Multiplexer. Basically contains some configs.
+Terminal Multiplexer. Basically contains some configs. Also, the onedark color scheme from [here](https://github.com/odedlaz/tmux-onedark-theme).
 
 ## Kitty
 
-An alternative terminal. Also contains some configs, and a nice background image for the terminal.
+An alternative terminal. Also contains some configs (colorscheme from the same repo as nvim), and a nice background image for the terminal.
 
 ## Links
 
