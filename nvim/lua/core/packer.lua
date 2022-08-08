@@ -47,6 +47,7 @@ return require('packer').startup(function()
   use 'tomlion/vim-solidity'
   use 'maxmellon/vim-jsx-pretty'
   use 'rust-lang/rust.vim'
+  use 'mfussenegger/nvim-jdtls'
 
   -- misc stuff
   use 'ThePrimeagen/vim-be-good'
