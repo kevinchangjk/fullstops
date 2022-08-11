@@ -8,3 +8,7 @@ export PATH=$HOME/.yarn/bin:$PATH
 
 # golang
 export PATH=$PATH:$(go env GOBIN)
+
+# jenv (java env manager)
+export PATH="$PATH:$HOME/.jenv/bin"
+eval "$(jenv init -)"
