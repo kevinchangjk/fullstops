@@ -28,7 +28,6 @@ return require('packer').startup(function()
   -- colorschemes
   use 'flazz/vim-colorschemes'
   use 'ful1e5/onedark.nvim'
-  -- use '$XDG_CONFIG_HOME/nvim/monokai.nvim'
 
   -- useful utility
   use 'mbbill/undotree'
