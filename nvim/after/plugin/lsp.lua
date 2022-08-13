@@ -162,7 +162,15 @@ require'lspconfig'.rls.setup{
   },
 }
 
+-- solidity
 require'lspconfig'.solidity_ls.setup{
+  single_file_support = true,
+  on_attach = on_attach,
+  capabilities = capabilities,
+}
+
+-- typescript/javascript
+require'lspconfig'.tsserver.setup{
   single_file_support = true,
   on_attach = on_attach,
   capabilities = capabilities,
