@@ -27,7 +27,7 @@ local config = {
     '-configuration', '/Users/kevin/.config/jdtls/config_mac',
 
     "-data",
-    vim.fn.expand("~/.cache/jdtls/workspace/") .. workspaceDir,
+    vim.fn.expand("/Users/kevin/.cache/jdtls/workspace/") .. workspaceDir,
   },
 
   silent = true,
