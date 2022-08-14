@@ -37,6 +37,6 @@ api.nvim_create_autocmd(
 api.nvim_create_autocmd(
   "FileType", {
     pattern = { "java" },
-    command = [[set tabstop=4 softtabstop=4 shiftwidth=4]],
+    command = [[setlocal tabstop=4 softtabstop=4 shiftwidth=4]],
     group = nusModGrp,
   })
