@@ -20,8 +20,8 @@ function setup() {
 
 setup
 
-# use vim keybindings in shell
-bindkey -v
+# use emacs keybindings in shell
+bindkey -e
 
 # printf '\033[2J\033[3J\033[1;1H' # clears screen
 clear -x
