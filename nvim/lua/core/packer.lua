@@ -60,4 +60,5 @@ return require('packer').startup(function()
   -- misc stuff
   use 'ThePrimeagen/vim-be-good'
   use 'wakatime/vim-wakatime'
+  use 'nguyenvukhang/nvim-toggler'
 end)
