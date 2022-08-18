@@ -14,7 +14,7 @@ for d in ${sourceDirs[@]}; do
   done
 done   
 
-CONNECT='\e[0;32mSuccessfully Connected to\e[m \e[1;32mpe113.comp.nus.edu.sg\e[m
+CONNECT='\e[0;32mSuccessfully Connected to\e[m \e[1;32mstu.comp.nus.edu.sg\e[m
 ';
 
 # use emacs keybindings in shell
