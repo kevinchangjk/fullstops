@@ -1,11 +1,11 @@
-#! /bin/zsh
+#! /bin/bash
 
 function ed() {
   case $1 in
-  '.') v $ZSH_DOTS/brew/edits;;
+  '.') v $BASH_DOTS/brew/edits;;
   'g'|'git') v $HOME/.gitconfig;;
   'v'|'nvim') v $DOTS/nvim/lua/core/set.lua;;
-  'z'|'zsh') v $ZSH_DOTS/zshrc;;
+  'b'|'bash') v $BASH_DOTS/bashrc;;
   'a' | 'ags') v $HOME/.config/ags/scanlist;;
   *) echo "nothing happened.";;
   esac

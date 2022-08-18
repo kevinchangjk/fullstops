@@ -1,49 +1,35 @@
-#! /bin/zsh
+#! /bin/bash
 
 alias out="cd .."
 alias back="cd -"
 alias i2="open"
 
 # checkpoint declarations
-export ARCHIVE="$REPOS/archive"
-export PROJECTS="$REPOS/projects"
-export ONE_KCJK="$HOME/OneDrive"
-export ONE_NUS="$HOME/'OneDrive - National University of Singapore'"
+export PROJECTS="$HOME/projects"
 
 # doc_start
-alias 22="v $ZSH_DOTS/brew/nav"
+alias 22="v $BASH_DOTS/brew/nav"
 alias 2.="cd $DOTS"
-alias 2a="cd $ARCHIVE"
 alias 2c="cd $HOME/.config"
-alias 2cb="cd $HOME/go/src/github.com/Switcheo/carbon"
 alias 2cc="cd $REPOS/code-comps"
 alias 2d="cd $HOME/Downloads"
-alias 2f="cd $REPOS/fintech"
-alias 2g="cd $ONE_KCJK/KCJK/'Good Shit'" 
-alias 2h="cd $PROJECTS/hcanoe-telegram"
 alias 2l="cd $HOME/.local"
 alias 2lb="cd $HOME/.local/bin"
 alias 2ls="cd $HOME/.local/src"
-alias 2m="cd $REPOS/misc"
-alias 2nus="ssh kevincjk@stu.comp.nus.edu.sg"
-alias 2o="cd $ONE_KCJK/KCJK"
-alias 2on="cd $ONE_NUS"
 alias 2p="cd $PROJECTS"
-alias 2pe="ssh -t kevincjk@stu.comp.nus.edu.sg ssh kevincjk@pe113.comp.nus.edu.sg"
-alias 2r="cd $REPOS"
-alias 2s="cd $REPOS/switcheo"
+alias 2pe="ssh -t kevincjk@pe113.comp.nus.edu.sg"
 alias 2v.="cd $DOTS/nvim"
 alias 2v="cd $HOME/.config/nvim"
-alias 2z="cd $ZSH_DOTS"
+alias 2z="cd $BASH_DOTS"
 # doc_end
 
 function 2,() {
   START="# doc_start"
   END="# doc_end"
-  [ `uname` = "Linux" ] && cat $ZSH_DOTS/brew/nav \
+  [ `uname` = "Linux" ] && cat $BASH_DOTS/brew/nav \
     | sed -n "/^# doc_start/,/^$START/{p;/^$END/q}" \
     | sed "s/alias //g"
-  [ `uname` = "Darwin" ] && cat $ZSH_DOTS/brew/nav \
+  [ `uname` = "Darwin" ] && cat $BASH_DOTS/brew/nav \
     | sed -n "/^# doc_start/,/^$START/p;/^$END/q" \
     | sed "s/alias //g"
   unset START END
@@ -54,38 +40,6 @@ function 2,() {
 # function 2r() {
 #   cd $(git rev-parse --show-toplevel)
 # }
-
-# to university folder
-function 2mod() {
-  cd /Users/kevin/'OneDrive - National University of Singapore'/Modules
-  BASEDIR="."
-
-  MODS=$(fd \
-    -t d \
-    -d 1 \
-    --base-directory $BASEDIR \
-    --exec basename)
-
-  RES+="home\n$MODS"
-
-  TARGET=$(echo $RES | fzf \
-    --height=10 +m \
-    --no-mouse \
-    --reverse \
-    --no-info \
-    --prompt="  " \
-    --color='pointer:2')
-
-  case $TARGET in 
-    "")
-      unset RES TARGET MODS
-      return true;;
-    "home") cd $BASEDIR;;
-    *) cd $BASEDIR/$TARGET;;
-  esac
-
-  unset RES TARGET MODS
-}
 
 # generic navigation
 function 2() {

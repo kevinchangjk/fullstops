@@ -1,7 +1,7 @@
-#! /bin/zsh
+#! /bin/bash
 
 # actual setup process for zsh
-BIRTHDAYS_DIR="/Users/kevin/ripples/fullstops/birthdays"
+BIRTHDAYS_DIR="$DOTS/birthdays"
 cd $BIRTHDAYS_DIR
 source setup
 cd -
@@ -12,4 +12,4 @@ alias bn="birthdays name"
 alias bl="birthdays list"
 alias ba="birthdays add"
 alias br="birthdays remove"
-alias bu="cp $BIRTHDAYS_URL ~/ripples/misc/birthdays.json && echo \"birthdays updated successfully\""
+alias bu="cp $BIRTHDAYS_URL ~/.config/birthdays.json && echo \"birthdays updated successfully\""
