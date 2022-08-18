@@ -1,29 +1,24 @@
-#! /bin/zsh 
+#! /bin/bash 
 
 # key variables
-export REPOS="$HOME/ripples"
-export DOTS="$REPOS/fullstops"
-export ZSH_DOTS="$DOTS/zsh"
+export DOTS="$HOME/fullstops"
+export BASH_DOTS="$DOTS/bash"
+export XDG_CONFIG_HOME="$HOME/.config"
 
-# zsh automagic completion
-autoload -U compinit
-compinit
-
-function setup() {
-  sourceDirs=()
-  sourceDirs+=(core brew)
-  for d in $sourceDirs[@]; do
-    fs=($(find $ZSH_DOTS/$d -type f))
-    for f in $fs[@]; do source "$f"; done
+sourceDirs=();                                                                                                                                                                           
+sourceDirs+=("core" "brew");                                                                                                                                                             
+for d in ${sourceDirs[@]}; do                                                                                                                                                            
+  fs=$(fd --type file --base-directory="$BASH_DOTS/$d");                                                                                                                              
+  for f in ${fs[@]}; do                                                                                                                                                                  
+    source "$BASH_DOTS/$d/$f";                                                                                                                                                        
   done
-}
+done   
 
-setup
+CONNECT='\e[0;32mSuccessfully Connected to\e[m \e[1;32mpe113.comp.nus.edu.sg\e[m
+';
 
 # use emacs keybindings in shell
 bindkey -e
 
-# printf '\033[2J\033[3J\033[1;1H' # clears screen
 clear -x
-py "$DOTS/quote/quotes.py"
-birthdays date
+printf "$CONNECT";

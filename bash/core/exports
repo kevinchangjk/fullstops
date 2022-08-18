@@ -1,4 +1,4 @@
-#! /bin/zsh 
+#! /bin/bash 
 
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
@@ -9,12 +9,3 @@ export NVIM="nvim"
 export EDITOR=$NVIM
 export MANPAGER='nvim +Man!'
 export VIM_CONFIG="$XDG_CONFIG_HOME/nvim"
-
-# go
-export GOPATH=$(go env GOPATH)
-export GOBIN=$(go env GOBIN)
-
-# for nvm
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
