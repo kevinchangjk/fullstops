@@ -1,3 +1,0 @@
-#! /bin/zsh
-
-ln -sf $DOTS/kitty $XDG_CONFIG_HOME/kitty

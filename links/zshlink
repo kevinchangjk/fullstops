@@ -1,3 +1,0 @@
-#! /bin/zsh
-
-ln -sf $ZSH_DOTS/zshrc $HOME/.zshrc
