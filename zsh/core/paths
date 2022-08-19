@@ -2,9 +2,8 @@
 
 # append
 path+=$HOME/.local/bin
-
-# prepend
-export PATH=$HOME/.yarn/bin:$PATH
+path+=/opt/local/bin
+path+=$HOME/.yarn/bin
 
 # golang
 export PATH=$PATH:$(go env GOBIN)
