@@ -1,5 +1,8 @@
 #! /bin/bash 
 
+# if non-interactive shell, return
+[ -z "$PS1" ] && return
+
 # key variables
 export DOTS="$HOME/fullstops"
 export BASH_DOTS="$DOTS/bash"
