@@ -1,5 +1,8 @@
 #! /bin/zsh 
 
+# returns if shell is non-interactive
+[ -z "$PS1" ] && return
+
 # key variables
 export REPOS="$HOME/ripples"
 export DOTS="$REPOS/fullstops"
