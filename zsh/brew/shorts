@@ -39,3 +39,16 @@ alias jfm="java -jar /$HOME/.config/misc/java-formatter.jar --replace"
 
 # NUS specific
 alias snus="ssh-copy-id kevincjk@stu.comp.nus.edu.sg"
+
+# scp for NUS stu.comp network
+function nuscp() {
+  if [ "$1" ]; then
+    if [ "$2" ]; then
+      scp -r $1 kevincjk@stu.comp.nus.edu.sg:$2
+    else
+      scp -r $1 kevincjk@stu.comp.nus.edu.sg:~
+    fi
+  else
+    echo "missing file to scp\nadd local path to file(s)"
+  fi
+}
