@@ -2,11 +2,11 @@
 
 function ed() {
   case $1 in
-  '.') v $BASH_DOTS/brew/edits;;
-  'g'|'git') v $HOME/.gitconfig;;
-  'v'|'nvim') v $DOTS/nvim/lua/core/set.lua;;
-  'b'|'bash') v $BASH_DOTS/bashrc;;
-  'a' | 'ags') v $HOME/.config/ags/scanlist;;
+  '.') nvim $BASH_DOTS/brew/edits;;
+  'g'|'git') nvim $HOME/.gitconfig;;
+  'v'|'nvim') nvim $DOTS/nvim/lua/core/set.lua;;
+  'b'|'bash') nvim $BASH_DOTS/bashrc;;
+  'a' | 'ags') nvim $HOME/.config/ags/scanlist;;
   *) echo "nothing happened.";;
   esac
 }

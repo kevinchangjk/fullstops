@@ -3,6 +3,9 @@
 # if non-interactive shell, return
 [ -z "$PS1" ] && return
 
+# set shell
+export TERM="screen-256color"
+
 # key variables
 export DOTS="$HOME/fullstops"
 export BASH_DOTS="$DOTS/bash"
