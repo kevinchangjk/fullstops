@@ -97,6 +97,13 @@ require'lspconfig'.tsserver.setup{
   capabilities = capabilities,
 }
 
+-- c 
+require'lspconfig'.clangd.setup{
+  single_file_support = true,
+  on_attach = on_attach,
+  capabilities = capabilities,
+}
+
 local M = {
   set_keymap = set_keymap,
   on_attach = on_attach,
