@@ -26,10 +26,8 @@ cmp.setup({
     fields = {'menu', 'abbr', 'kind'}
   },
   mapping = {
-    ['<CR>'] = cmp.mapping.confirm({select = true}),
-    ['<C-p>'] = cmp.mapping.select_prev_item(select_opts),
-    ['<C-n>'] = cmp.mapping.select_next_item(select_opts),
-    ['<Tab>'] = cmp.mapping(function(fallback)
+    ['<Tab>'] = cmp.mapping.confirm({select = true}),
+    ['<C-n>'] = cmp.mapping(function(fallback)
       local col = vim.fn.col('.') - 1
 
       if cmp.visible() then
@@ -40,7 +38,7 @@ cmp.setup({
         cmp.complete()
       end
     end, {'i', 's'}),
-    ['<S-Tab>'] = cmp.mapping(function(fallback)
+    ['<C-p>'] = cmp.mapping(function(fallback)
       if cmp.visible() then
         cmp.select_prev_item(select_opts)
       else
