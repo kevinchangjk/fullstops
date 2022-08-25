@@ -15,9 +15,6 @@ alias yb="yarn build"
 alias yd="yarn dev"
 alias zr="exec $SHELL -l" # reloads shell
 
-# gcc gdb stuff
-alias gdb="gdb-apple"
-
 # fuzzy finder
 alias ff='fzf -m -1 -0 --no-bold'
 alias fm='cd ${$(fd --type d --hidden --exclude .git | ff):-$(pwd)}'
