@@ -33,6 +33,7 @@ alias tk="tmux kill-session -t"
 alias j="java"
 alias jc="javac"
 alias jfm="java -jar /$HOME/.config/misc/java-formatter.jar --replace"
+alias jg="./gradlew"
 
 # NUS specific
 alias snus="ssh-copy-id kevincjk@stu.comp.nus.edu.sg"
