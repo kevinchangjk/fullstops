@@ -2,16 +2,16 @@
 
 # for zshrc
 rm -f ~/.zshrc
-source ./links/zshlink
+source ./scripts/zshlink
 
 # for tmux.confg
 rm -f ~/.tmux.conf
-source ./links/tmuxlink
+source ./scripts/tmuxlink
 
 # for nvim configs
 rm -rf $XDG_CONFIG_HOME/nvim
-source ./links/nvimlink
+source ./scripts/nvimlink
 
 # for kitty configs
 rm -rf $XDG_CONFIG_HOME/kitty
-source ./links/kittylink
+source ./scripts/kittylink

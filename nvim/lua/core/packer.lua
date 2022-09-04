@@ -33,6 +33,7 @@ return require('packer').startup(function()
   use 'mbbill/undotree'
   use 'preservim/nerdtree'
   use 'nvim-treesitter/nvim-treesitter'
+  use 'nvim-treesitter/nvim-treesitter-context'
   use 'nvim-lualine/lualine.nvim'
   use 'kyazdani42/nvim-web-devicons'
   use 'psliwka/vim-smoothie'
