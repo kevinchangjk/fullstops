@@ -15,7 +15,7 @@ local harpoon = {
 -- local functions for adding file and navigating
 local jump = function(n)
   return function()
-    print('Harpooned to index ' .. n .. '/4')
+    print('Harpooned to index ' .. n)
     harpoon.ui.nav_file(n)
   end
 end
