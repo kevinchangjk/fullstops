@@ -38,6 +38,7 @@ return require('packer').startup(function()
   use 'kyazdani42/nvim-web-devicons'
   use 'psliwka/vim-smoothie'
   use {'prettier/vim-prettier', run = 'yarn install --frozen-lockfile --production' }  
+  use 'ThePrimeagen/harpoon'
 
   -- lsp
   use {
