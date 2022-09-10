@@ -28,7 +28,7 @@ end
 
 -- key remaps
 nnoremap('<leader>h', harpoon.ui.toggle_quick_menu)
-nnoremap('<leader>m', add, true)
+nnoremap('<leader>mk', add, true)
 nnoremap('<leader>1', jump(1), true)
 nnoremap('<leader>2', jump(2), true)
 nnoremap('<leader>3', jump(3), true)
