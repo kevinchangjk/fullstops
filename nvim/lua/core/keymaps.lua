@@ -55,8 +55,6 @@ vnoremap("<leader>y", '"+y')
 
 -- split jumping
 nnoremap("<c-h>", ":wincmd h<cr>")
-nnoremap("<c-j>", ":wincmd j<cr>")
-nnoremap("<c-k>", ":wincmd k<cr>")
 nnoremap("<c-l>", ":wincmd l<cr>")
 nnoremap("<c-g>", ":wincmd =<cr>")
 
