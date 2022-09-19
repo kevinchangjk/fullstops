@@ -3,4 +3,5 @@ require('nvim-toggler').setup({
   ['True'] = 'False',
   ['frontend'] = 'backend',
   ['male'] = 'female',
+  ['and'] = 'or',
 })
