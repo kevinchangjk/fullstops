@@ -15,7 +15,7 @@ alias gitm="v .gitmodules"
 # alias gp="git number -c $VIM" # git preview
 alias gp="git push"
 alias gpl="git pull"
-alias gpl="git pull upstream master"
+alias gplu="git pull upstream master"
 alias gpu="git push -u origin HEAD"
 alias gcan="git commit --amend --no-edit"
 
