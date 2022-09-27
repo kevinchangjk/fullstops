@@ -5,6 +5,7 @@ alias ga="git number add"
 alias gaa="git add --all"
 alias gco="git number checkout"
 alias gb="git branch"
+alias gbd="git branch -d"
 
 alias gd="git number diff"
 alias gds="git number diff --staged"
@@ -13,6 +14,8 @@ alias gr="git number reset"
 alias gitm="v .gitmodules"
 # alias gp="git number -c $VIM" # git preview
 alias gp="git push"
+alias gpl="git pull"
+alias gpl="git pull upstream master"
 alias gpu="git push -u origin HEAD"
 alias gcan="git commit --amend --no-edit"
 
