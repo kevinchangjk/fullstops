@@ -5,5 +5,5 @@ local nnoremap = Map.noremap("n")
 --   silent! nmap <unique> <c-\>      <Plug>(SmoothieDownwards)
 --   ]])
 
-nnoremap("<c-k>", "<Plug>(SmoothieUpwards)")
-nnoremap("<c-j>", "<Plug>(SmoothieDownwards)")
+nnoremap("<c-u>", "<Plug>(SmoothieUpwards)")
+nnoremap("<c-d>", "<Plug>(SmoothieDownwards)")
