@@ -8,6 +8,7 @@ opt.relativenumber = true
 opt.nu = true
 opt.wrap = false
 opt.hidden = true
+opt.mouse =
 vim.cmd([[
   syntax on
   filetype plugin indent on
