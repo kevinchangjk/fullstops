@@ -8,7 +8,7 @@ require('onedark').setup({
       return {
         MsgArea = { bg = c.bg1 },
         ColorColumn = { bg = c.bg1 },
-        NormalFloat = { bg = c.bg1 },
+        NormalFloat = { bg = nil },
       }
     end,
 
