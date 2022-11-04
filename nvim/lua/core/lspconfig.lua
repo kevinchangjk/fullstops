@@ -18,12 +18,18 @@ local function on_attach(_, bufnr)
 	print("LSP attached")
 end
 
-local capabilities = require("cmp_nvim_lsp").update_capabilities(vim.lsp.protocol.make_client_capabilities())
+local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
-local lspconfig = {
-  set_keymap = set_keymap,
-  on_attach = on_attach,
-  capabilities = capabilities,
-}
+local lspconfig = function(opts)
+  return vim.tbl_extend(
+    'keep',
+    opts or {},
+    { on_attach = on_attach,
+      capabilities = capabilities,
+      set_keymap = set_keymap,
+      single_file_support = true
+    }
+  )
+end
 
 return lspconfig

@@ -1,8 +1,9 @@
 -- java (jdtls)
 -- See `:help vim.lsp.start_client` for an overview of the supported `config` options.
 local workspaceDir = vim.fn.fnamemodify(vim.fn.getcwd(), ":p:h:t")
-local on_attach = require('core.lspconfig').on_attach
-local capabilities = require('core.lspconfig').capabilities
+local baseconfig = require('core.lspconfig')
+local on_attach = baseconfig().on_attach
+local capabilities = baseconfig().capabilities
 
 local config = {
   -- The command that starts the language server

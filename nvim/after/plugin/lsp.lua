@@ -1,62 +1,42 @@
 require('mason').setup()
 require('mason-lspconfig').setup()
 
-local on_attach = require('core.lspconfig').on_attach
-local capabilities = require('core.lspconfig').capabilities
+local lsp = require('lspconfig');
+local baseconfig = require('core.lspconfig')
 
 -- lua
-require'lspconfig'.sumneko_lua.setup({
-  single_file_support = true,
-  on_attach = on_attach,
-  capabilities = capabilities,
-  settings = {
-    Lua = {
-      runtime = {
-        -- Tell the language server which version of Lua you're using (most likely LuaJIT in the case of Neovim)
-        version = 'LuaJIT',
-      },
-      diagnostics = {
-        -- Get the language server to recognize the `vim` global
-        globals = {'vim'},
-      },
-      workspace = {
-        -- Make the server aware of Neovim runtime files
-        library = vim.api.nvim_get_runtime_file("", true),
-      },
-      -- Do not send telemetry data containing a randomized but unique identifier
-      telemetry = {
-        enable = false,
-      },
+lsp.sumneko_lua.setup(baseconfig({
+  Lua = {
+    runtime = {
+      -- Tell the language server which version of Lua you're using (most likely LuaJIT in the case of Neovim)
+      version = 'LuaJIT',
+    },
+    diagnostics = {
+      -- Get the language server to recognize the `vim` global
+      globals = {'vim'},
+    },
+    workspace = {
+      -- Make the server aware of Neovim runtime files
+      library = vim.api.nvim_get_runtime_file("", true),
+    },
+    -- Do not send telemetry data containing a randomized but unique identifier
+    telemetry = {
+      enable = false,
     },
   },
-})
+}))
 
 -- bash
-require'lspconfig'.bashls.setup{
-  single_file_support = true,
-  on_attach = on_attach,
-  capabilities = capabilities,
-}
+lsp.bashls.setup(baseconfig())
 
 -- json
-require'lspconfig'.jsonls.setup{
-  single_file_support = true,
-  on_attach = on_attach,
-  capabilities = capabilities,
-}
+lsp.jsonls.setup(baseconfig())
 
 -- markdown
-require'lspconfig'.marksman.setup{
-  single_file_support = true,
-  on_attach = on_attach,
-  capabilities = capabilities,
-}
+lsp.marksman.setup(baseconfig())
 
 -- python
-require'lspconfig'.pylsp.setup{
-  single_file_support = true,
-  on_attach = on_attach,
-  capabilities = capabilities,
+lsp.pylsp.setup(baseconfig({
   settings = {
     pylsp = {
       plugins = {
@@ -67,13 +47,10 @@ require'lspconfig'.pylsp.setup{
       }
     }
   }
-}
+}))
 
 -- rust
-require'lspconfig'.rls.setup{
-  single_file_support = true,
-  on_attach = on_attach,
-  capabilities = capabilities,
+lsp.rls.setup(baseconfig({
   settings = {
     rust = {
       unstable_features = true,
@@ -81,33 +58,17 @@ require'lspconfig'.rls.setup{
       all_features = true,
     },
   },
-}
+}))
 
 -- solidity
-require'lspconfig'.solidity_ls.setup{
-  single_file_support = true,
-  on_attach = on_attach,
-  capabilities = capabilities,
-}
+lsp.solidity_ls.setup(baseconfig())
 
 -- typescript/javascript
-require'lspconfig'.tsserver.setup{
-  single_file_support = true,
-  on_attach = on_attach,
-  capabilities = capabilities,
-}
+lsp.tsserver.setup(baseconfig())
 
 -- c 
-require'lspconfig'.clangd.setup{
-  single_file_support = true,
-  on_attach = on_attach,
-  capabilities = capabilities,
-}
+lsp.clangd.setup(baseconfig())
 
-local M = {
-  set_keymap = set_keymap,
-  on_attach = on_attach,
-  capabilities = capabilities,
-}
+local M = baseconfig()
 
 return M
