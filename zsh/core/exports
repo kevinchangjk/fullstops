@@ -11,8 +11,8 @@ export MANPAGER='nvim +Man!'
 export VIM_CONFIG="$XDG_CONFIG_HOME/nvim"
 
 # go
-export GOPATH=$(go env GOPATH)
-export GOBIN=$(go env GOBIN)
+export GOPATH="/Users/kevin/.go"
+export GOBIN="/Users/kevin/.go/bin"
 
 # for nvm
 export NVM_DIR="$HOME/.nvm"
