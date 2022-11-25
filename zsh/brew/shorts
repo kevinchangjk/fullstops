@@ -50,3 +50,96 @@ function nuscp() {
     echo "missing file to scp\nadd local path to file(s)"
   fi
 }
+
+# codeforces shortcuts
+# clones the template file into a specified filename
+# to be called while inside codeforces/cpp, codeforces/python, codeforces/java
+function cfnew() {
+  FILETYPE=$(basename $PWD);
+  EXTENSION="";
+
+  case $FILETYPE in 
+    "cpp")
+      EXTENSION="cpp"
+      ;;
+    "python")
+      EXTENSION="py"
+      ;;
+    "java")
+      EXTENSION="java"
+      ;;
+    *)
+      echo "invalid directory! \ngo to a language in codeforces";
+      return 1;;
+  esac
+
+  if [ "$1" ]; then
+    cp "template.$EXTENSION" "$1.$EXTENSION";
+  else
+    echo "missing filename to clone template to";
+  fi
+}
+
+# simple function for testing with/without inputs
+function cftest() {
+  FILETYPE=$(basename $PWD);
+
+  if [ "$1" ]; then
+    # pass
+  else 
+    echo "missing filename to test";
+  fi
+
+  case $FILETYPE in 
+    "cpp")
+      ./"$1.exe"
+      ;;
+    "python")
+      python3 "$1.py"
+      ;;
+    "java")
+      java "$1"
+      ;;
+    *)
+      echo "invalid directory! \ngo to a language in codeforces";
+      return 1;;
+  esac
+}
+
+# same as cftest, but with input file
+function cftesti() {
+  FILETYPE=$(basename $PWD);
+
+  if [ "$1" ]; then
+    # pass
+  else 
+    echo "missing filename to test";
+  fi
+
+  case $FILETYPE in 
+    "cpp")
+      ./"$1.exe" < input.txt
+      ;;
+    "python")
+      python3 "$1.py" < input.txt
+      ;;
+    "java")
+      java "$1" < input.txt
+      ;;
+    *)
+      echo "invalid directory! \ngo to a language in codeforces";
+      return 1;;
+  esac
+}
+
+# simpler function for compiling cpp files
+function gpp() {
+  EXTENSION="cpp";
+
+  if [ "$1" ]; then 
+    g++ "$1.$EXTENSION" -o "$1.exe";
+    chmod +x "$1.exe";
+  else 
+    echo "missing filename to compile";
+  fi
+}
