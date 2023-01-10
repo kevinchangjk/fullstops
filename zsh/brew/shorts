@@ -37,6 +37,8 @@ alias jg="./gradlew"
 
 # NUS specific
 alias snus="ssh-copy-id kevincjk@stu.comp.nus.edu.sg"
+alias pyai="source ~/opt/anaconda3/bin/activate && source activate CS2109S"
+alias pyde="conda deactivate"
 
 # scp for NUS stu.comp network
 function nuscp() {
