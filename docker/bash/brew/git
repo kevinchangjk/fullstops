@@ -1,0 +1,60 @@
+#! /bin/zsh
+
+# managing changes
+alias gs="gitnu status" # git status
+alias ga="gitnu add"
+alias gaa="gitnu add --all"
+alias grs="gitnu restore"
+alias gd="gitnu diff"
+alias gds="gitnu diff --staged"
+alias gr="gitnu reset"
+alias gp="git push"
+alias gpu="git push -u origin HEAD"
+alias gpl="git pull"
+alias gplu="git pull upstream master"
+alias gplo="git pull origin master"
+alias gap="gitnu add -p"
+alias gms="git merge --squash" # squash diff into one commit
+
+# git commit
+alias gc="git commit"
+alias gcan="git commit --amend --no-edit"
+function gcm() {
+  if [ "$1" ]; then
+    git commit -m $1
+  else
+    git commit
+  fi
+}
+
+# git commit --amend
+function gca() {
+  if [ "$1" ]; then
+    git commit --amend -m $1
+  else
+    git commit --amend
+  fi
+}
+
+# managing branches
+alias gco="gitnu checkout"
+alias gcob="gitnu checkout -b"
+alias gb="gitnu branch"
+alias gbd="gitnu branch -d"
+
+# git log
+function gl() {
+  [ "$1" ] && len=$1 || len=20
+  git log --oneline --graph -n $len
+}
+
+# the laziest git function ever
+function gq() {
+  gitnu add .
+  git commit -m ${1-"update"}
+  git push
+}
+
+# misc
+alias giti="v .gitignore"
+alias gitm="v .gitmodules"

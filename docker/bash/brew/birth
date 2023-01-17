@@ -1,0 +1,15 @@
+#! /bin/zsh
+
+# actual setup process for zsh
+BIRTHDAYS_DIR="/Users/kevin/ripples/fullstops/birthdays"
+cd $BIRTHDAYS_DIR
+source setup
+cd -
+
+# personal aliases
+alias bd="birthdays date"
+alias bn="birthdays name"
+alias bl="birthdays list"
+alias ba="birthdays add"
+alias br="birthdays remove"
+alias bu="cp $BIRTHDAYS_URL ~/ripples/misc/birthdays.json; cd '$REPOS/misc'; gq 'update birthdays'; cd -; echo \"\nBirthdays updated successfully!\""
