@@ -1,7 +1,7 @@
 #! /bin/bash
 
 rm -f ~/.bashrc
-source ./links/bashlink
+source ./scripts/bashlink
 
 # for nvim configs
 rm -rf $XDG_CONFIG_HOME/nvim

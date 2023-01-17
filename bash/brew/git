@@ -1,5 +1,7 @@
 #! /bin/zsh
 
+alias gitnu="git number"
+
 # managing changes
 alias gs="gitnu status" # git status
 alias ga="gitnu add"
