@@ -13,23 +13,23 @@ cmp.setup({
       luasnip.lsp_expand(args.body)
     end
   },
-  sources = {
+  sources = cmp.config.sources({
     {name = 'path'},
     {name = 'nvim_lsp', keyword_length = 3},
-    {name = 'buffer', keyword_length = 3},
     {name = 'luasnip', keyword_length = 2},
-  },
+  }, {
+    {name = 'buffer', keyword_length = 3},
+  }),
   window = {
+    completion = cmp.config.window.bordered(),
     documentation = cmp.config.window.bordered()
   },
   formatting = {
     fields = {'menu', 'abbr', 'kind'}
   },
   mapping = {
-    ['<CR>'] = cmp.mapping.confirm({select = true}),
-    ['<C-p>'] = cmp.mapping.select_prev_item(select_opts),
-    ['<C-n>'] = cmp.mapping.select_next_item(select_opts),
-    ['<Tab>'] = cmp.mapping(function(fallback)
+    ['<Tab>'] = cmp.mapping.confirm({select = true}),
+    ['<C-n>'] = cmp.mapping(function(fallback)
       local col = vim.fn.col('.') - 1
 
       if cmp.visible() then
@@ -40,7 +40,7 @@ cmp.setup({
         cmp.complete()
       end
     end, {'i', 's'}),
-    ['<S-Tab>'] = cmp.mapping(function(fallback)
+    ['<C-p>'] = cmp.mapping(function(fallback)
       if cmp.visible() then
         cmp.select_prev_item(select_opts)
       else
@@ -48,4 +48,22 @@ cmp.setup({
       end
     end, {'i', 's'}),
   }
+})
+
+-- Use buffer source for `/` and `?` (if you enabled `native_menu`, this won't work anymore).
+cmp.setup.cmdline({ '/', '?' }, {
+  mapping = cmp.mapping.preset.cmdline(),
+  sources = {
+    { name = 'buffer' }
+  }
+})
+
+-- Use cmdline & path source for ':' (if you enabled `native_menu`, this won't work anymore).
+cmp.setup.cmdline(':', {
+  mapping = cmp.mapping.preset.cmdline(),
+  sources = cmp.config.sources({
+    { name = 'path' }
+  }, {
+    { name = 'cmdline' }
+  })
 })

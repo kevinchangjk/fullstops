@@ -18,9 +18,8 @@ return require('packer').startup(function()
   -- telescope & dependencies
   use {'nvim-telescope/telescope.nvim',
     requires = {
-      'nvim-telescope/telescope-fzy-native.nvim', 
-      'nvim-lua/popup.nvim', 
-      'nvim-lua/plenary.nvim', 
+      'nvim-telescope/telescope-fzy-native.nvim',
+      'nvim-lua/plenary.nvim',
       'BurntSushi/ripgrep'
     }
   }
@@ -33,15 +32,19 @@ return require('packer').startup(function()
   use 'mbbill/undotree'
   use 'preservim/nerdtree'
   use 'nvim-treesitter/nvim-treesitter'
+  use 'nvim-treesitter/nvim-treesitter-context'
   use 'nvim-lualine/lualine.nvim'
-  use 'ackyshake/VimCompletesMe'
   use 'kyazdani42/nvim-web-devicons'
   use 'psliwka/vim-smoothie'
-  use {'prettier/vim-prettier', run = 'yarn install --frozen-lockfile --production' }  
-  use({
-    "iamcco/markdown-preview.nvim",
-    run = function() vim.fn["mkdp#util#install"]() end,
-  })
+  use {'prettier/vim-prettier', run = 'yarn install --frozen-lockfile --production' }
+  use 'ThePrimeagen/harpoon'
+  use 'iamcco/markdown-preview.nvim'
+  use {'weirongxu/plantuml-previewer.vim',
+    requires = {
+      'tyru/open-browser.vim',
+      'aklt/plantuml-syntax'
+    }
+  }
 
   -- lsp
   use {

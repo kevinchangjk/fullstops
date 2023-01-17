@@ -1,13 +1,8 @@
 #! /bin/bash
 
-# for zshrc
 rm -f ~/.bashrc
 source ./links/bashlink
 
-# for tmux.confg
-rm -f ~/.tmux.conf
-source ./links/tmuxlink
-
 # for nvim configs
 rm -rf $XDG_CONFIG_HOME/nvim
-source ./links/nvimlink
+source ./scripts/nvimlink

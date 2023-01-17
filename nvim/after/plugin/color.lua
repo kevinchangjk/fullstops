@@ -4,11 +4,12 @@ require('onedark').setup({
 
     -- Overwrites color
     -- Notably, for the message area / command line
-    overrides = function(c) 
+    overrides = function(c)
       return {
         MsgArea = { bg = c.bg1 },
         ColorColumn = { bg = c.bg1 },
         NormalFloat = { bg = c.bg1 },
+        TelescopeBorder = { bg = c.bg_visual },
       }
     end,
 

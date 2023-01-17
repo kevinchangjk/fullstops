@@ -15,15 +15,21 @@ local function on_attach(_, bufnr)
 	set_keymap(bufnr, "gr", vim.lsp.buf.references)
 	set_keymap(bufnr, "gi", vim.lsp.buf.implementation)
 	set_keymap(bufnr, "gv", vim.lsp.buf.hover)
-	print("LSP attached!")
+	print("LSP attached")
 end
 
-local capabilities = require("cmp_nvim_lsp").update_capabilities(vim.lsp.protocol.make_client_capabilities())
+local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
-local lspconfig = {
-  set_keymap = set_keymap,
-  on_attach = on_attach,
-  capabilities = capabilities,
-}
+local lspconfig = function(opts)
+  return vim.tbl_extend(
+    'keep',
+    opts or {},
+    { on_attach = on_attach,
+      capabilities = capabilities,
+      set_keymap = set_keymap,
+      single_file_support = true
+    }
+  )
+end
 
 return lspconfig

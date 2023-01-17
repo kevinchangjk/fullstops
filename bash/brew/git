@@ -1,34 +1,24 @@
-#! /bin/bash
-alias gs="git number" # git status
-alias ga="git number add"
-alias gaa="git add --all"
-alias gco="git number checkout"
-alias gb="git branch"
+#! /bin/zsh
 
-alias gd="git number diff"
-alias gds="git number diff --staged"
-alias giti="v .gitignore"
-alias gr="git number reset"
-alias gitm="v .gitmodules"
-# alias gp="git number -c $VIM" # git preview
+# managing changes
+alias gs="gitnu status" # git status
+alias ga="gitnu add"
+alias gaa="gitnu add --all"
+alias grs="gitnu restore"
+alias gd="gitnu diff"
+alias gds="gitnu diff --staged"
+alias gr="gitnu reset"
 alias gp="git push"
 alias gpu="git push -u origin HEAD"
-alias gcan="git commit --amend --no-edit"
-
-alias gap="git number add -p"
+alias gpl="git pull"
+alias gplu="git pull upstream master"
+alias gplo="git pull origin master"
+alias gap="gitnu add -p"
 alias gms="git merge --squash" # squash diff into one commit
 
-alias gu="git fetch && git number status" # git update
-alias gc="git commit"
-alias gau="git add -u"
-
-# git log
-function gl() {
-  [ "$1" ] && len=$1 || len=20
-  git log --oneline --graph -n $len
-}
-
 # git commit
+alias gc="git commit"
+alias gcan="git commit --amend --no-edit"
 function gcm() {
   if [ -z "$1" ]; then
     git commit -m "update"
@@ -46,28 +36,25 @@ function gca() {
   fi
 }
 
+# managing branches
+alias gco="gitnu checkout"
+alias gcob="gitnu checkout -b"
+alias gb="gitnu branch"
+alias gbd="gitnu branch -d"
+
+# git log
+function gl() {
+  [ "$1" ] && len=$1 || len=20
+  git log --oneline --graph -n $len
+}
+
 # the laziest git function ever
 function gq() {
-  git add .
-  gcm "${1}"
+  gitnu add .
+  git commit -m ${1-"update"}
   git push
 }
 
-# delete branch
-# git branch -d <branch_name>
-
-# delete remote branch
-# git push origin -d <branch_name>
-
-# to remove a submodule completely:
-# 0. mv a/submodule a/submodule_tmp
-# 1. git submodule deinit -f -- a/submodule    
-# 2. rm -rf .git/modules/a/submodule
-# 3. git rm -f a/submodule
-# Note: a/submodule (no trailing slash)
- 
-# or, if you want to leave it in your working tree and have done step 0
-# 3.   git rm --cached a/submodule
-# 3b.  mv a/submodule_tmp a/submodule
-# remove a file with sensitive data from history
-# git filter-repo --invert-paths --path secrets.json
+# misc
+alias giti="v .gitignore"
+alias gitm="v .gitmodules"
