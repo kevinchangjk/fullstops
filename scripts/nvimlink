@@ -1,6 +1,6 @@
 #! /bin/zsh
 
-ln -sf $DOTS/nvim $XDG_CONFIG_HOME/nvim
+ln -sf $DOTS/nvim ~/.config/nvim
 
 git clone --depth 1 https://github.com/wbthomason/packer.nvim\
  ~/.local/share/nvim/site/pack/packer/start/packer.nvim
