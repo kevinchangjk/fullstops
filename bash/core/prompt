@@ -10,7 +10,7 @@ function branch() {
 oldps1="${debian_chroot:+($debian_chroot)}\u@\h:\w\$ ";                         
 
 function prompt {                                                               
-  local ARROW="--> "
+  local ARROW="--> ";
   local USER="\[\e[1;34m\]\u@\h: \w\[\e[m\]";                                    
   local BRANCH="\[\e[2;37m\]$(branch)\[\e[m\]";
   local GREEN="\[\e[0;32m\]$ARROW\[\e[m\]";                                     

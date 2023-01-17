@@ -38,6 +38,10 @@ return require('packer').startup(function()
   use 'kyazdani42/nvim-web-devicons'
   use 'psliwka/vim-smoothie'
   use {'prettier/vim-prettier', run = 'yarn install --frozen-lockfile --production' }  
+  use({
+    "iamcco/markdown-preview.nvim",
+    run = function() vim.fn["mkdp#util#install"]() end,
+  })
 
   -- lsp
   use {
