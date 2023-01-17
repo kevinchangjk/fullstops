@@ -1,4 +1,4 @@
-#! /bin/zsh
+#! /bin/bash
 
 # managing changes
 alias gs="gitnu status" # git status

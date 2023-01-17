@@ -1,4 +1,4 @@
-#! /bin/zsh
+#! /bin/bash
 
 function ed() {
   case $1 in
@@ -6,7 +6,6 @@ function ed() {
   'g'|'git') v $HOME/.gitconfig;;
   'v'|'nvim') v $DOTS/nvim/lua/core/set.lua;;
   'z'|'zsh') v $ZSH_DOTS/zshrc;;
-  'a' | 'ags') v $HOME/.config/ags/scanlist;;
   *) echo "nothing happened.";;
   esac
 }
