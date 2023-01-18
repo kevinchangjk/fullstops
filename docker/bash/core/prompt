@@ -7,5 +7,16 @@ function branch() {
   [[ ! -z $b ]] && echo "[$b]"
 }
 
-export $PS1=$'%F{blue}%~ %F{241}$(branch)%f
-%(?.%F{green}$ARROW%f.%F{red}$ARROW%f)'
+function prompt {                                                               
+  local ARROW="--> ";
+  local USER="\[\e[1;34m\]\u@\h: \w\[\e[m\]";                                    
+  local BRANCH="\[\e[2;37m\]$(branch)\[\e[m\]";
+  local GREEN="\[\e[0;32m\]$ARROW\[\e[m\]";                                     
+  local RED="\[\e[0;31m\]$ARROW\[\e[m\]";                                       
+  
+  export PS1="\`if [ \$? == '0' ];                                              
+  then echo $'$USER $BRANCH\n$GREEN';                                                 
+  else echo $'$USER $BRANCH\n$RED'; fi\`";                                            
+}
+
+prompt

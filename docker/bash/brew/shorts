@@ -1,9 +1,5 @@
 #! /bin/bash
 
-# vim
-alias vim=$NVIM
-alias v=$NVIM
-
 # general
 alias ct="printf '\033[2J\033[3J\033[1;1H'" # clear terminal
 alias gup="pass git push"

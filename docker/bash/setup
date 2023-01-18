@@ -1,5 +1,28 @@
 #! /bin/bash
 
-apt install exa fzf
+apt update
+apt install -y unzip
+apt install -y curl
+apt install -y git
+apt install -y neovim
+
+mkdir ~/.config
+mkdir ~/.local
+mkdir ~/.local/bin
+
+# install exa
+EXA_VERSION=$(curl -s "https://api.github.com/repos/ogham/exa/releases/latest" | grep -Po '"tag_name": "v\K[0-9.]+')
+curl -Lo exa.zip "https://github.com/ogham/exa/releases/latest/download/exa-linux-x86_64-v${EXA_VERSION}.zip"
+unzip -q exa.zip bin/exa -d /usr/local
+rm -rf exa.zip
+
+# install fzf
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.config/fzf
+~/.config/fzf/install
+
+# install fd
+apt install -y fd-find
+ln -s $(which fdfind) ~/.local/bin/fd
+export PATH+=":/root/.local/bin"
 
 echo "source ~/fullstops/bashrc" >> ~/.bashrc

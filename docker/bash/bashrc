@@ -1,19 +1,24 @@
 #! /bin/bash
 
-export DOTS="~/fullstops";
+# set shell
+export TERM="screen-256color"
+
+export HOME="/root";
+export DOTS="$HOME/fullstops";
+export XDG_CONFIG_HOME="$HOME/.config"
+
+export PATH+=":/root/.local/bin"
 
 function setup() {
   sourceDirs=();
-  sourceDirs+=(core brew)
-  for d in $sourceDirs[@]; do
-    fs=($find $DOTS/$d -type f)
-    for f in $fs[@]; do source "$f"; done
+  sourceDirs+=("core" "brew");
+  for d in ${sourceDirs[@]}; do
+    fs=$(fd --type file --base-directory="$DOTS/$d");
+    for f in ${fs[@]}; do
+      source "$DOTS/$d/$f";
+    done
   done
 }
 
 setup
 
-# use emacs keybindings in shell
-bindkey -e
-
-clear -x

@@ -1,5 +1,4 @@
 #! /bin/bash
 
 # append
-path+=$HOME/.local/bin
-path+=/opt/local/bin
+export PATH+=":/opt/local/bin";
