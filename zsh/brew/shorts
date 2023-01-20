@@ -43,7 +43,10 @@ alias condal="pyai && pyde"
 
 # canvas-sync
 source $HOME/ripples/nus/canvas/token
-alias canvas="canvas-sync $HOME/ripples/nus/canvas/canvas.json"
+CANVAS_CONFIG="$HOME/ripples/nus/canvas/config.yml"
+alias canvas="canvas-sync $CANVAS_CONFIG"
+alias canvasf="canvas-sync $CANVAS_CONFIG fetch"
+alias canvasp="canvas-sync $CANVAS_CONFIG pull"
 
 # scp for NUS stu.comp network
 function nuscp() {
