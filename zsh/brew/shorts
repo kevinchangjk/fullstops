@@ -1,8 +1,7 @@
-#! /bin/bash
+#! /bin/zsh
 
 # vim
-alias vim=$NVIM
-alias v=$NVIM
+alias v="vim"
 
 # general
 alias ct="printf '\033[2J\033[3J\033[1;1H'" # clear terminal
@@ -15,6 +14,7 @@ alias yd="yarn dev"
 alias zr="exec $SHELL -l" # reloads shell
 
 # fuzzy finder
+alias fd="fdfind"
 alias ff='fzf -m -1 -0 --no-bold'
 alias fm='cd ${$(fd --type d --hidden --exclude .git | ff):-$(pwd)}'
 alias ft='fm; tn'

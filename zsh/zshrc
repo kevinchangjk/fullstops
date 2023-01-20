@@ -1,0 +1,23 @@
+#! /bin/zsh 
+
+# if non-interactive shell, return
+[ -z "$PS1" ] && return
+
+# set shell
+export TERM="screen-256color"
+
+# key variables
+export DOTS="$HOME/ripples/fullstops"
+export ZSH_DOTS="$DOTS/zsh"
+export XDG_CONFIG_HOME="$HOME/.config"
+
+sourceDirs=();
+sourceDirs+=("core" "brew");
+for d in ${sourceDirs[@]}; do
+  for f in $ZSH_DOTS/$d/*; do
+    source $f
+  done
+done
+
+# use emacs keybindings in shell
+bindkey -e

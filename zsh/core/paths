@@ -1,4 +1,4 @@
-#! /bin/bash
+#! /bin/zsh
 
 # append
 export PATH=$PATH:$HOME/.yarn/bin:$HOME/.local/bin

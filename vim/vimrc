@@ -1,0 +1,4 @@
+" run all .vim files in vim folder
+for f in split(glob('$DOTS/vim/*.vim'), '\n')
+  exe 'source' f
+endfor

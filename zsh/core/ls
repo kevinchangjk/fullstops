@@ -1,4 +1,4 @@
-#! /bin/bash
+#! /bin/zsh
 
 # listing files
 alias ls="exa -a --group-directories-first --ignore-glob='.DS_Store'"

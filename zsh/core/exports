@@ -1,0 +1,13 @@
+#! /bin/zsh 
+
+export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+
+# vim stuff
+export XDG_CONFIG_HOME="$HOME/.config"
+export VIM_CONFIG="XDG_CONFIG_HOME/vim"
+export VIMRC="$DOTS/vim/vimrc"
+export VIMINIT=":source $VIMRC"
+export EDITOR="vim"
+export MANPAGER='vim +Man!'
+export VIM_CONFIG="$XDG_CONFIG_HOME/vim"

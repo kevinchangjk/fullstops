@@ -1,7 +1,3 @@
-" not meant to be loaded during normal vim
-" serves as just a vimscript version of my configs
-" contains core configs, equivalent to set.lua
-
 " basics
 filetype plugin indent on 
 set ruler
@@ -24,14 +20,16 @@ set expandtab
 set hlsearch
 set incsearch
 
-" setting undodir
+" setting undodir; accessible through $VIM_CONFIG/.undo directory
+" $VIM_CONFIG=~/.config/.nvim
 set undofile
-set undodir
+set undodir=$VIM_CONFIG/undodir
 set noswapfile
 set nobackup
 set nowritebackup
 
 " additional settings
+set belloff=all
 set signcolumn="yes"
 set smartcase
 set updatetime=50
@@ -40,3 +38,8 @@ set sidescrolloff=16
 set noshowmode
 set showmatch
 set spelllang="en_us"
+
+" colour scheme
+set colorcolumn=80
+highlight ColorColumn ctermbg=238 guibg=lightgrey
+color molokai

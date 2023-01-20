@@ -19,8 +19,7 @@ noremap L $
 
 " remap for joining lines
 nnoremap G :join<cr>
-nnoremap gg :join!<cr>
-vnoremap G :join<cr>
+nnoremap gg :join!<cr> vnoremap G :join<cr>
 vnoremap gg :join!<cr>
 
 " yank to clipboard
@@ -37,3 +36,6 @@ nnoremap <c-g> <c-w>=
 " jump to parent enclosing parantheses
 nnoremap <silent> [[ :call searchpair('\[', '', '\]', 'b')<cr>
 nnoremap <silent> ]] :call searchpair('\[', '', '\]')<cr>
+
+" undotree
+nnoremap <silent> <leader>t :UndotreeToggle<cr>

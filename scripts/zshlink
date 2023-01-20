@@ -1,0 +1,3 @@
+#! /bin/zsh
+
+ln -sf ~/fullstops/zsh/zshrc $HOME/.zshrc

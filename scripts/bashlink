@@ -1,3 +1,0 @@
-#! /bin/bash
-
-ln -sf ~/fullstops/bash/bashrc $HOME/.bashrc

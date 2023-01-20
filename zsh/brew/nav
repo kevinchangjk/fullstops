@@ -1,4 +1,4 @@
-#! /bin/bash
+#! /bin/zsh
 
 alias out="cd .."
 alias back="cd -"
@@ -12,10 +12,9 @@ alias 2d="cd $HOME/Downloads"
 alias 2l="cd $HOME/.local"
 alias 2lb="cd $HOME/.local/bin"
 alias 2ls="cd $HOME/.local/src"
-alias 2pe="ssh -t kevincjk@pe113.comp.nus.edu.sg"
-alias 2v.="cd $DOTS/nvim"
-alias 2v="cd $HOME/.config/nvim"
-alias 2z="cd $BASH_DOTS"
+alias 2v.="cd $DOTS/vim"
+alias 2v="cd $HOME/.config/vim"
+alias 2z="cd $ZSH_DOTS"
 # doc_end
 
 function 2,() {

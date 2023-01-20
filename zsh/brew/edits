@@ -1,0 +1,11 @@
+#! /bin/zsh
+
+function ed() {
+  case $1 in
+  '.') v $ZSH_DOTS/brew/edits;;
+  'g'|'git') v $HOME/.gitconfig;;
+  'v'|'vim') v $DOTS/vim/vimrc;;
+  'z'|'zsh') v $ZSH_DOTS/bashrc;;
+  *) echo "nothing happened.";;
+  esac
+}
