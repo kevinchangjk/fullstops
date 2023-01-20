@@ -4,19 +4,14 @@ alias out="cd .."
 alias back="cd -"
 alias i2="open"
 
-# checkpoint declarations
-export PROJECTS="$HOME/projects"
-
 # doc_start
 alias 22="v $BASH_DOTS/brew/nav"
 alias 2.="cd $DOTS"
 alias 2c="cd $HOME/.config"
-alias 2cc="cd $REPOS/code-comps"
 alias 2d="cd $HOME/Downloads"
 alias 2l="cd $HOME/.local"
 alias 2lb="cd $HOME/.local/bin"
 alias 2ls="cd $HOME/.local/src"
-alias 2p="cd $PROJECTS"
 alias 2pe="ssh -t kevincjk@pe113.comp.nus.edu.sg"
 alias 2v.="cd $DOTS/nvim"
 alias 2v="cd $HOME/.config/nvim"
@@ -37,9 +32,9 @@ function 2,() {
 }
 
 # goes to root of git repo
-# function 2r() {
-#   cd $(git rev-parse --show-toplevel)
-# }
+function 2r() {
+  cd $(git rev-parse --show-toplevel)
+}
 
 # generic navigation
 function 2() {

@@ -6,7 +6,6 @@ function ed() {
   'g'|'git') nvim $HOME/.gitconfig;;
   'v'|'nvim') nvim $DOTS/nvim/lua/core/set.lua;;
   'b'|'bash') nvim $BASH_DOTS/bashrc;;
-  'a' | 'ags') nvim $HOME/.config/ags/scanlist;;
   *) echo "nothing happened.";;
   esac
 }
