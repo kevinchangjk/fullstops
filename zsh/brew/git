@@ -50,7 +50,7 @@ function gl() {
 
 # the laziest git function ever
 function gq() {
-  gitnu add .
+  gitnu add --all
   if [ -z "$1" ]; then
     git commit -m "update"
   else
