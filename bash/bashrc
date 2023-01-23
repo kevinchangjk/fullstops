@@ -1,30 +1,15 @@
 #! /bin/bash 
 
-# if non-interactive shell, return
-[ -z "$PS1" ] && return
-
-# set shell
-export TERM="screen-256color"
-
 # key variables
-export DOTS="$HOME/fullstops"
+export DOTS="$HOME/ripples/fullstops"
 export BASH_DOTS="$DOTS/bash"
 export XDG_CONFIG_HOME="$HOME/.config"
 
 sourceDirs=();
 sourceDirs+=("core" "brew");
 for d in ${sourceDirs[@]}; do
-  fs=$(fd --type file --base-directory="$BASH_DOTS/$d");
+  fs=$(fdfind --type file --base-directory="$BASH_DOTS/$d");
   for f in ${fs[@]}; do
     source "$BASH_DOTS/$d/$f";
   done
 done
-
-CONNECT='\e[0;32mSuccessfully Connected to\e[m \e[1;32mstu.comp.nus.edu.sg\e[m
-';
-
-# use emacs keybindings in shell
-bindkey -e
-
-clear -x
-printf "$CONNECT";

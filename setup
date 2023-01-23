@@ -1,8 +1,13 @@
 #! /bin/bash
 
-rm -f ~/.bashrc
+# basic exports
+export DOTS="~/ripples/fullstops"
+
+# necessary installs
+sudo apt install -y exa fzf fd-find neovim
+
+# for bashrc
 source ./scripts/bashlink
 
 # for nvim configs
-rm -rf $XDG_CONFIG_HOME/nvim
 source ./scripts/nvimlink

@@ -39,12 +39,6 @@ return require('packer').startup(function()
   use {'prettier/vim-prettier', run = 'yarn install --frozen-lockfile --production' }
   use 'ThePrimeagen/harpoon'
   use 'iamcco/markdown-preview.nvim'
-  use {'weirongxu/plantuml-previewer.vim',
-    requires = {
-      'tyru/open-browser.vim',
-      'aklt/plantuml-syntax'
-    }
-  }
 
   -- lsp
   use {
@@ -65,7 +59,6 @@ return require('packer').startup(function()
   use 'rafamadriz/friendly-snippets'
 
   -- misc stuff
-  use 'ThePrimeagen/vim-be-good'
   use 'wakatime/vim-wakatime'
   use 'nguyenvukhang/nvim-toggler'
 end)

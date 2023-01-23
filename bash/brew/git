@@ -1,7 +1,5 @@
 #! /bin/zsh
 
-alias gitnu="git number"
-
 # managing changes
 alias gs="gitnu status" # git status
 alias ga="gitnu add"
@@ -52,7 +50,7 @@ function gl() {
 
 # the laziest git function ever
 function gq() {
-  gitnu add .
+  git add .
   if [ -z "$1" ]; then
     git commit -m "update"
   else
