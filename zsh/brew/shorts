@@ -35,11 +35,14 @@ alias jc="javac"
 alias jfm="java -jar /$HOME/.config/misc/java-formatter.jar --replace"
 alias jg="./gradlew"
 
-# NUS specific
-alias snus="ssh-copy-id kevincjk@stu.comp.nus.edu.sg"
+# conda commands
 alias pyai="source ~/opt/anaconda3/bin/activate && source activate CS2109S"
 alias pyde="conda deactivate && conda deactivate"
 alias condal="pyai && pyde"
+alias jpt="/Users/kevin/opt/anaconda3/bin/jupyter_mac.command ; exit;"
+
+# NUS specific
+alias snus="ssh-copy-id kevincjk@stu.comp.nus.edu.sg"
 
 # canvas-sync
 source $HOME/ripples/nus/canvas/token

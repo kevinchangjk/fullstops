@@ -31,12 +31,3 @@ api.nvim_create_autocmd(
     command = [[nnoremap <buffer><silent> q :quit<CR>]],
     group = navGrp,
   })
-
--- nus cs mod specific
--- for java files, make indents 4 spaces
-api.nvim_create_autocmd(
-  "FileType", {
-    pattern = { "java" },
-    command = [[setlocal tabstop=4 softtabstop=4 shiftwidth=4]],
-    group = nusModGrp,
-  })
