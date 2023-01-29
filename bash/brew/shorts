@@ -20,6 +20,14 @@ alias fm='cd ${$(fd --type d --hidden --exclude .git | ff):-$(pwd)}'
 alias ft='fm; tn'
 alias fv='v $(ff)'
 
+# tmux shortcuts
+alias tm="tmux"
+alias td="tmux detach"
+alias tn="tmux new -s"
+alias ts="tmux ls"
+alias ta="tmux attach-session -t"
+alias tk="tmux kill-session -t"
+
 # simpler function for compiling cpp files
 function gpp() {
   EXTENSION="cpp";
