@@ -4,6 +4,8 @@ alias out="cd .."
 alias back="cd -"
 alias i2="open"
 
+export REPOS="$HOME/ripples"
+
 # doc_start
 alias 22="v $BASH_DOTS/brew/nav"
 alias 2.="cd $DOTS"
@@ -12,6 +14,9 @@ alias 2d="cd $HOME/Downloads"
 alias 2l="cd $HOME/.local"
 alias 2lb="cd $HOME/.local/bin"
 alias 2ls="cd $HOME/.local/src"
+alias 2n="cd $REPOS/nus/"
+alias 2stu="ssh kevincjk@stu.comp.nus.edu.sg"
+alias 2xlog="ssh -J kevincjk@stu.comp.nus.edu.sg kevincjk@xlog0"
 alias 2v.="cd $DOTS/nvim"
 alias 2v="cd $HOME/.config/nvim"
 alias 2z="cd $BASH_DOTS"
