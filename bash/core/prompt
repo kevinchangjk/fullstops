@@ -3,23 +3,21 @@
 
 function branch() {
   b=$(git branch --show-current 2> /dev/null)
-  [[ ! -z $b ]] && echo "[$b]"
+  [[ ! -z $b ]] && echo "\[\e[2;37m\][$b]\[\e[m\]"
 }
 
-# prompt config                                                                 
-oldps1="${debian_chroot:+($debian_chroot)}\u@\h:\w\$ ";                         
+# prompt config
+oldps1="${debian_chroot:+($debian_chroot)}\u@\h:\w\$ ";
 
-function prompt {                                                               
+function prompt {
   local ARROW="--> ";
-  local USER="\[\e[1;94m\]\w\[\e[m\]";                                    
-  local BRANCH="\[\e[2;37m\]$(branch)\[\e[m\]";
-  local GREEN="\[\e[0;32m\]$ARROW\[\e[m\]";                                     
-  local RED="\[\e[0;31m\]$ARROW\[\e[m\]";                                       
+  local USER="\[\e[1;94m\]\w\[\e[m\]";
+  local GREEN="\[\e[0;32m\]$ARROW\[\e[m\]";
+  local RED="\[\e[0;31m\]$ARROW\[\e[m\]";
   
-  export PS1="\`if [ \$? == '0' ];                                              
-  then echo $'$USER $BRANCH\n$GREEN';                                                 
-  else echo $'$USER $BRANCH\n$RED'; fi\`";                                            
-}                                                                               
-#"                                                                              
+  export PS1=\`"if [ \$? == '0' ];
+  then echo '$USER $(branch)\n$GREEN';
+  else echo '$USER $(branch)\n$RED'; fi"\`;
+}
 
-prompt 
+export PROMPT_COMMAND=prompt

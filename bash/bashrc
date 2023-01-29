@@ -13,3 +13,5 @@ for d in ${sourceDirs[@]}; do
     source "$BASH_DOTS/$d/$f";
   done
 done
+
+clear -x
