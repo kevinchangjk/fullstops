@@ -28,3 +28,4 @@ bindkey -e
 
 clear -x
 printf "$CONNECT";
+. "$HOME/.cargo/env"

@@ -1,0 +1,82 @@
+" setting undo: accessible through ~/.vim/undodir directory
+set undodir=~/.vim/undodir
+set undofile
+set nobackup
+set noswapfile
+
+" basic settings
+syntax on
+set ruler
+set autoindent
+set smartindent
+set breakindent
+set shiftwidth=2
+set tabstop=2
+set expandtab
+set belloff=all
+set relativenumber
+set nu
+set nowrap
+set smartcase
+set incsearch
+set nohlsearch
+set hidden
+set scrolloff=16
+set updatetime=50
+set signcolumn=yes
+
+filetype plugin indent on
+
+" plugins
+
+call plug#begin('~/.vim/plugged')
+
+Plug 'BurntSushi/ripgrep'
+Plug 'flazz/vim-colorschemes'
+Plug 'tpope/vim-fugitive'
+Plug 'mbbill/undotree'
+Plug 'preservim/nerdtree'
+Plug 'ackyshake/VimCompletesMe'
+Plug 'kyazdani42/nvim-web-devicons'
+Plug 'ryanoasis/vim-devicons'
+Plug 'psliwka/vim-smoothie'
+
+call plug#end()
+
+" remaps
+let mapleader = " "
+nnoremap Y y$
+noremap H ^
+noremap J G
+noremap K gg
+noremap L $
+nnoremap gg :join<cr>
+nnoremap G :join!<cr>
+nnoremap <c-j> <c-w>j
+nnoremap <c-k> <c-w>k
+nnoremap <c-h> <c-w>h
+nnoremap <c-l> <c-w>l
+nnoremap <c-g> <c-w>=
+silent! nmap <unique> <c-]>      <Plug>(SmoothieUpwards)
+silent! nmap <unique> <c-\>      <Plug>(SmoothieDownwards)
+nnoremap <silent> <leader>n :NERDTreeToggle<CR>
+nnoremap <silent> <leader>t :UndotreeToggle<CR>
+
+" auto commands
+autocmd FileType java nnoremap <buffer> <F5> :update<cr> :exec '!javac' shellescape(expand('%'), 1)<cr>
+
+" nerdtree configs
+autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
+let NERDTreeShowHiddnen=1
+let NERDTreeQuitOnOpen=1
+
+" shortcuts for java
+ab sout System.out.println(
+ab psvm public static void main(String[] args) {
+
+" color scheme
+set colorcolumn=80
+highlight ColorColumn ctermbg=0 guibg=lightgrey
+color molokai
+highlight Normal ctermbg=none
+highlight NonText ctermbg=none
