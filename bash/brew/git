@@ -50,7 +50,7 @@ function gl() {
 
 # the laziest git function ever
 function gq() {
-  gitnu add .
+  git-nu add .
   git commit -m ${1-"update"}
   git push
 }

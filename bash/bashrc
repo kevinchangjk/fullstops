@@ -20,8 +20,10 @@ for d in ${sourceDirs[@]}; do
   done
 done
 
-CONNECT='\e[0;32mSuccessfully Connected to\e[m \e[1;32mstu.comp.nus.edu.sg\e[m
-';
+node=$(uname -n)
+
+CONNECT="\e[0;32mSuccessfully Connected to\e[m \e[1;32m$node\e[m
+";
 
 # use emacs keybindings in shell
 bindkey -e
