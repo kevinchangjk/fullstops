@@ -1,8 +1,21 @@
 #! /bin/zsh
 
-alias out="cd .."
 alias back="cd -"
 alias i2="open"
+
+function out() {
+  if [ "$1" ];
+  then
+    i=0;
+    while [ $i -lt $1 ];
+    do
+      cd ..;
+      i=$(( $i + 1));
+    done
+  else 
+    cd ..;
+  fi
+}
 
 # checkpoint declarations
 export ARCHIVE="$REPOS/archive"
