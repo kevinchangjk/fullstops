@@ -1,0 +1,1 @@
+ln -sf ~/fullstops/tmux/tmux.conf ~/.tmux.conf

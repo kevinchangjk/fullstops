@@ -17,8 +17,8 @@ function prompt {
   local RED="\[\e[0;31m\]$ARROW\[\e[m\]";
 
   export PS1=\`"if [ \$? == '0' ];
-  then echo '$HOST $USER $(branch)\n$GREEN';
-  else echo '$HOST $USER $(branch)\n$RED'; fi"\`;
+  then echo '$HOST$USER $(branch)\n$GREEN';
+  else echo '$HOST$USER $(branch)\n$RED'; fi"\`;
 }
 
 export PROMPT_COMMAND=prompt
