@@ -12,9 +12,10 @@ alias 2d="cd $HOME/Downloads"
 alias 2l="cd $HOME/.local"
 alias 2lb="cd $HOME/.local/bin"
 alias 2ls="cd $HOME/.local/src"
-alias 2pe="ssh -t kevincjk@pe113.comp.nus.edu.sg"
+alias 2pe="ssh kevincjk@pe113.comp.nus.edu.sg"
 alias 2v.="cd $DOTS/nvim"
 alias 2v="cd $HOME/.config/nvim"
+alias 2xl="ssh kevincjk@xlog"
 alias 2z="cd $BASH_DOTS"
 # doc_end
 

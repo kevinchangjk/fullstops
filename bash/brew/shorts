@@ -20,6 +20,11 @@ alias fm='cd ${$(fd --type d --hidden --exclude .git | ff):-$(pwd)}'
 alias ft='fm; tn'
 alias fv='v $(ff)'
 
+# ssh
+function scpxl() {
+  scp -r $1 kevincjk@xlog:~
+}
+
 # simpler function for compiling cpp files
 function gpp() {
   EXTENSION="cpp";
