@@ -1,7 +1,8 @@
 #! /bin/zsh
 
 # listing files
-alias ls="exa -a --group-directories-first --ignore-glob='.DS_Store'"
+alias ls="exa --group-directories-first --ignore-glob='.DS_Store'"
+alias la="exa -a --group-directories-first --ignore-glob='.DS_Store'"
 alias ll="exa -al --group-directories-first --ignore-glob='.DS_Store'"
 
 # file tree
