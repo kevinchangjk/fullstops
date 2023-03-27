@@ -40,7 +40,8 @@ alias jg="./gradlew"
 alias pyai="source ~/opt/anaconda3/bin/activate && source activate CS2109S"
 alias pyde="conda deactivate && conda deactivate"
 alias condal="pyai && pyde"
-alias jpt="/Users/kevin/opt/anaconda3/bin/jupyter_mac.command ; exit;"
+alias jpt="/Users/kevin/opt/anaconda3/bin/jupyter_mac.command"
+alias jptai="/Users/kevin/opt/anaconda3/envs/CS2109S/bin/jupyter_mac.command"
 
 # NUS specific
 alias snus="ssh-copy-id kevincjk@stu.comp.nus.edu.sg"
