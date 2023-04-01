@@ -40,6 +40,7 @@ return require('packer').startup(function()
   use 'ThePrimeagen/harpoon'
   use 'iamcco/markdown-preview.nvim'
   use {'weirongxu/plantuml-previewer.vim',
+  use 'tpope/vim-fugitive',
     requires = {
       'tyru/open-browser.vim',
       'aklt/plantuml-syntax'
