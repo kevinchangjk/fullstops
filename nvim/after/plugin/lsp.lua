@@ -71,7 +71,7 @@ lsp.tsserver.setup(baseconfig())
 -- c 
 lsp.clangd.setup(baseconfig())
 
-[[ sql lsp not very nice at the moment
+--[[ sql lsp not very nice at the moment
 -- sql
 lsp.sqlls.setup(baseconfig({
   settings = {
