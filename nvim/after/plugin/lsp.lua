@@ -71,6 +71,22 @@ lsp.tsserver.setup(baseconfig())
 -- c 
 lsp.clangd.setup(baseconfig())
 
+[[ sql lsp not very nice at the moment
+-- sql
+lsp.sqlls.setup(baseconfig({
+  settings = {
+    cmd = {
+      "sql-language-server",
+      "up",
+    },
+    filetypes = {
+      "sql",
+      "mysql",
+    },
+  },
+}))
+]]
+
 local M = baseconfig()
 
 return M

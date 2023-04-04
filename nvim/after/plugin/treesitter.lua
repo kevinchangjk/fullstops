@@ -21,6 +21,7 @@ require'nvim-treesitter.configs'.setup {
       "rust",
       "typescript",
       "solidity",
+      "sql",
       "vim",
       "yaml"
     },
