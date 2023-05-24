@@ -69,4 +69,5 @@ return require('packer').startup(function()
   use 'ThePrimeagen/vim-be-good'
   use 'wakatime/vim-wakatime'
   use 'nguyenvukhang/nvim-toggler'
+  use 'github/copilot.vim'
 end)
