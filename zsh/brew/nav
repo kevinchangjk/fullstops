@@ -1,9 +1,9 @@
 #! /bin/zsh
 
-alias back="cd -"
+alias bk="cd -"
 alias i2="open"
 
-function out() {
+function oo() {
   if [ "$1" ];
   then
     i=0;
@@ -30,7 +30,6 @@ alias 2a="cd $ARCHIVE"
 alias 2c="cd $HOME/.config"
 alias 2cc="cd $REPOS/code-comps"
 alias 2d="cd $HOME/Downloads"
-alias 2g="cd $ONE_KCJK/KCJK/'Good Shit'" 
 alias 2l="cd $HOME/.local"
 alias 2lb="cd $HOME/.local/bin"
 alias 2ls="cd $HOME/.local/src"
@@ -60,11 +59,6 @@ function 2,() {
   unset START END
   return true
 }
-
-# goes to root of git repo
-# function 2r() {
-#   cd $(git rev-parse --show-toplevel)
-# }
 
 # to university folder
 function 2mod() {
