@@ -52,7 +52,7 @@ lsp.pylsp.setup(baseconfig({
 }))
 
 -- rust
-lsp.rls.setup(baseconfig({
+lsp.rust_analyzer.setup(baseconfig({
   settings = {
     rust = {
       unstable_features = true,
