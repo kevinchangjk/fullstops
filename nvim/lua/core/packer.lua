@@ -39,8 +39,8 @@ return require('packer').startup(function()
   use {'prettier/vim-prettier', run = 'yarn install --frozen-lockfile --production' }
   use 'ThePrimeagen/harpoon'
   use 'iamcco/markdown-preview.nvim'
-  use {'weirongxu/plantuml-previewer.vim',
-  use 'tpope/vim-fugitive',
+  use 'weirongxu/plantuml-previewer.vim'
+  use {'tpope/vim-fugitive',
     requires = {
       'tyru/open-browser.vim',
       'aklt/plantuml-syntax'
@@ -54,6 +54,7 @@ return require('packer').startup(function()
     "neovim/nvim-lspconfig",
   }
   use 'mfussenegger/nvim-jdtls'
+  use 'lervag/vimtex'
 
   -- autocompletion
   use 'hrsh7th/cmp-nvim-lsp'
