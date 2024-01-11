@@ -17,6 +17,9 @@ function ou() {
   fi
 }
 
+# autojump
+[ -f /opt/homebrew/etc/profile.d/autojump.sh ] && . /opt/homebrew/etc/profile.d/autojump.sh
+
 # checkpoint declarations
 export ARCHIVE="$REPOS/archive"
 export PROJECTS="$REPOS/projects"

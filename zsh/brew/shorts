@@ -32,10 +32,7 @@ alias ta="tmux attach-session -t"
 alias tk="tmux kill-session -t"
 
 # java commands
-alias j="java"
-alias jc="javac"
 alias jfm="java -jar /$HOME/.config/misc/java-formatter.jar --replace"
-alias jg="./gradlew"
 
 # conda commands
 alias pyai="source ~/opt/anaconda3/bin/activate && source activate CS2109S"
