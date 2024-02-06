@@ -8,8 +8,7 @@ opt.relativenumber = true
 opt.nu = true
 opt.wrap = false
 opt.hidden = true
-opt.mouse =
-vim.cmd([[
+opt.mouse = vim.cmd([[
   syntax on
   filetype plugin indent on
   ]])
@@ -29,7 +28,7 @@ opt.incsearch = true
 
 -- setting undodir
 opt.undofile = true
-opt.undodir  = VIM_CONFIG .. "/undodir"
+opt.undodir = VIM_CONFIG .. "/undodir"
 opt.swapfile = false
 opt.backup = false
 opt.writebackup = false

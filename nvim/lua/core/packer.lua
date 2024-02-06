@@ -36,7 +36,6 @@ return require('packer').startup(function()
   use 'nvim-lualine/lualine.nvim'
   use 'kyazdani42/nvim-web-devicons'
   use 'psliwka/vim-smoothie'
-  use {'prettier/vim-prettier', run = 'yarn install --frozen-lockfile --production' }
   use 'ThePrimeagen/harpoon'
   use 'iamcco/markdown-preview.nvim'
   use 'weirongxu/plantuml-previewer.vim'
@@ -47,12 +46,13 @@ return require('packer').startup(function()
     }
   }
 
-  -- lsp
+  -- mason: lsp, dap, linters, formatters
   use {
     "williamboman/mason.nvim",
     "williamboman/mason-lspconfig.nvim",
     "neovim/nvim-lspconfig",
   }
+  use 'mhartington/formatter.nvim'
   use 'mfussenegger/nvim-jdtls'
   use 'lervag/vimtex'
 
