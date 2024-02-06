@@ -21,15 +21,11 @@ end
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
 local lspconfig = function(opts)
-  return vim.tbl_extend(
-    'keep',
-    opts or {},
-    { on_attach = on_attach,
-      capabilities = capabilities,
-      set_keymap = set_keymap,
-      single_file_support = true
-    }
-  )
+	return vim.tbl_extend(
+		"keep",
+		opts or {},
+		{ on_attach = on_attach, capabilities = capabilities, set_keymap = set_keymap, single_file_support = true }
+	)
 end
 
 return lspconfig
