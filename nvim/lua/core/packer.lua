@@ -51,7 +51,10 @@ return require("packer").startup(function()
 		"williamboman/mason-lspconfig.nvim",
 		"neovim/nvim-lspconfig",
 	})
-	use({ "mfussenegger/nvim-dap", "rcarriga/nvim-dap-ui" })
+	use({ "rcarriga/nvim-dap-ui", requires = {
+		"mfussenegger/nvim-dap",
+		"mortepau/codicons.nvim",
+	} })
 	use("mfussenegger/nvim-lint")
 	use("mhartington/formatter.nvim")
 	use("mfussenegger/nvim-jdtls")
