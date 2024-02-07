@@ -26,20 +26,29 @@ return require("packer").startup(function()
 	})
 
 	-- colorschemes
-	use("flazz/vim-colorschemes")
 	use("ful1e5/onedark.nvim")
 
 	-- useful utility
 	use("mbbill/undotree")
 	use("preservim/nerdtree")
-	use("nvim-treesitter/nvim-treesitter")
-	use("nvim-treesitter/nvim-treesitter-context")
 	use("nvim-lualine/lualine.nvim")
 	use("kyazdani42/nvim-web-devicons")
-	use("psliwka/vim-smoothie")
 	use("ThePrimeagen/harpoon")
+
+	-- syntax highlighting
+	use("nvim-treesitter/nvim-treesitter")
+	use("nvim-treesitter/nvim-treesitter-context")
+
+	-- smooth scrolling
+	use("psliwka/vim-smoothie")
+
+	-- markdown
 	use("iamcco/markdown-preview.nvim")
+
+	-- uml
 	use("weirongxu/plantuml-previewer.vim")
+
+	-- git
 	use({ "tpope/vim-fugitive", requires = {
 		"tyru/open-browser.vim",
 		"aklt/plantuml-syntax",
@@ -53,12 +62,9 @@ return require("packer").startup(function()
 	})
 	use({ "rcarriga/nvim-dap-ui", requires = {
 		"mfussenegger/nvim-dap",
-		"mortepau/codicons.nvim",
 	} })
 	use("mfussenegger/nvim-lint")
 	use("mhartington/formatter.nvim")
-	use("mfussenegger/nvim-jdtls")
-	use("lervag/vimtex")
 
 	-- autocompletion
 	use("hrsh7th/cmp-nvim-lsp")
@@ -71,7 +77,6 @@ return require("packer").startup(function()
 	use("rafamadriz/friendly-snippets")
 
 	-- misc stuff
-	use("ThePrimeagen/vim-be-good")
 	use("wakatime/vim-wakatime")
 	use("nguyenvukhang/nvim-toggler")
 	use("github/copilot.vim")

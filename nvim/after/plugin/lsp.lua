@@ -62,6 +62,9 @@ lsp.rust_analyzer.setup(baseconfig({
 	},
 }))
 
+-- java
+lsp.jdtls.setup(baseconfig())
+
 -- solidity
 lsp.solidity_ls.setup(baseconfig())
 
@@ -71,21 +74,19 @@ lsp.tsserver.setup(baseconfig())
 -- c
 lsp.clangd.setup(baseconfig())
 
---[[ sql lsp not very nice at the moment
 -- sql
 lsp.sqlls.setup(baseconfig({
-  settings = {
-    cmd = {
-      "sql-language-server",
-      "up",
-    },
-    filetypes = {
-      "sql",
-      "mysql",
-    },
-  },
+	settings = {
+		cmd = {
+			"sql-language-server",
+			"up",
+		},
+		filetypes = {
+			"sql",
+			"mysql",
+		},
+	},
 }))
-]]
 
 local M = baseconfig()
 
