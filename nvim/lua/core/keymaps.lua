@@ -1,6 +1,3 @@
--- sets leader as the space key
-vim.g.mapleader = " "
-
 -- noremap function as global variable
 Map = {}
 

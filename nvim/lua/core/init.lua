@@ -1,4 +1,4 @@
 require("core.set")
-require("core.packer")
 require("core.keymaps")
+require("core.lazy")
 require("core.lspconfig")
