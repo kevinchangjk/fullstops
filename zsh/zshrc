@@ -1,7 +1,14 @@
-#! /bin/zsh 
+#! /bin/zsh
 
 # returns if shell is non-interactive
 [ -z "$PS1" ] && return
+
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
 
 # key variables
 export REPOS="$HOME/ripples"
@@ -11,6 +18,14 @@ export ZSH_DOTS="$DOTS/zsh"
 # zsh automagic completion
 autoload -U compinit
 compinit
+
+source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
+
+# To customize prompt, edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# use emacs keybindings in shell
+bindkey -e
 
 function setup() {
   sourceDirs=()
@@ -23,10 +38,6 @@ function setup() {
 
 setup
 
-# use emacs keybindings in shell
-bindkey -e
-
-# printf '\033[2J\033[3J\033[1;1H' # clears screen
 clear -x
 py "$DOTS/quote/quotes.py"
 birthdays date

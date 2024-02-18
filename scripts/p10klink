@@ -1,0 +1,3 @@
+#! /bin/zsh
+
+ln -sf $DOTS/zsh/brew/p10k $HOME/.p10k.zsh

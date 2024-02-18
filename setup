@@ -15,3 +15,7 @@ source ./scripts/nvimlink
 # for kitty configs
 rm -rf $XDG_CONFIG_HOME/kitty
 source ./scripts/kittylink
+
+# for p10k configs
+rm -rf ~/.p10k.zsh
+source ./scripts/p10klink
