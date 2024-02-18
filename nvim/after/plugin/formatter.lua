@@ -70,6 +70,10 @@ require("formatter").setup({
 			require("formatter.filetypes.sh").shfmt,
 		},
 
+		bash = {
+			require("formatter.filetypes.sh").shfmt,
+		},
+
 		zsh = {
 			require("formatter.filetypes.sh").shfmt,
 		},
