@@ -15,10 +15,6 @@ export REPOS="$HOME/ripples"
 export DOTS="$REPOS/fullstops"
 export ZSH_DOTS="$DOTS/zsh"
 
-# zsh automagic completion
-autoload -U compinit
-compinit
-
 source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
 
 # To customize prompt, edit ~/.p10k.zsh.
@@ -37,6 +33,10 @@ function setup() {
 }
 
 setup
+
+# zsh automagic completion
+autoload -U compinit
+compinit
 
 clear -x
 py "$DOTS/quote/quotes.py"
