@@ -42,3 +42,4 @@ opt.sidescrolloff = 16
 opt.showmode = false
 opt.showmatch = true
 opt.spelllang = "en_us"
+opt.clipboard = "unnamedplus"
