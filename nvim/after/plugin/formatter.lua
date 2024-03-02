@@ -62,9 +62,9 @@ require("formatter").setup({
 		-- 	require("formatter.filetypes.python").autopep8,
 		-- },
 
-		java = {
-			require("formatter.filetypes.java").google_java_format,
-		},
+		-- java = {
+		-- 	require("formatter.filetypes.java").google_java_format,
+		-- },
 
 		sh = {
 			require("formatter.filetypes.sh").shfmt,
