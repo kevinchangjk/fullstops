@@ -1,4 +1,4 @@
-#! /bin/zsh 
+#! /bin/zsh
 
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
@@ -13,6 +13,10 @@ export VIM_CONFIG="$XDG_CONFIG_HOME/nvim"
 # go
 export GOPATH="/Users/kevin/.go"
 export GOBIN="/Users/kevin/.go/bin"
+
+# hadoop
+export JAVA_HOME="/Users/kevin/.jenv/versions/openjdk64-17.0.1"
+export HADOOP_ROOT_LOGGER="WARN,console"
 
 # for nvm
 export NVM_DIR="$HOME/.nvm"
