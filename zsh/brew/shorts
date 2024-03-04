@@ -40,6 +40,14 @@ alias pyde="conda deactivate && conda deactivate"
 alias condal="pyai && pyde"
 alias jpt="/Users/kevin/opt/anaconda3/bin/jupyter_mac.command"
 
+# cargo commands
+alias cg="cargo"
+alias cgr="cargo run"
+alias cgc="cargo check"
+alias cgb="cargo build"
+alias cgt="cargo test"
+alias cgu="cargo update"
+
 # NUS specific
 alias snus="ssh-copy-id kevincjk@stu.comp.nus.edu.sg"
 
@@ -67,91 +75,94 @@ function nuscp() {
 # clones the template file into a specified filename
 # to be called while inside codeforces/cpp, codeforces/python, codeforces/java
 function cfnew() {
-  FILETYPE=$(basename $PWD);
-  EXTENSION="";
+  FILETYPE=$(basename $PWD)
+  EXTENSION=""
 
-  case $FILETYPE in 
-    "cpp")
-      EXTENSION="cpp"
-      ;;
-    "python")
-      EXTENSION="py"
-      ;;
-    "java")
-      EXTENSION="java"
-      ;;
-    *)
-      echo "invalid directory! \ngo to a language in codeforces";
-      return 1;;
+  case $FILETYPE in
+  "cpp")
+    EXTENSION="cpp"
+    ;;
+  "python")
+    EXTENSION="py"
+    ;;
+  "java")
+    EXTENSION="java"
+    ;;
+  *)
+    echo "invalid directory! \ngo to a language in codeforces"
+    return 1
+    ;;
   esac
 
   if [ "$1" ]; then
-    cp "template.$EXTENSION" "$1.$EXTENSION";
+    cp "template.$EXTENSION" "$1.$EXTENSION"
   else
-    echo "missing filename to clone template to";
+    echo "missing filename to clone template to"
   fi
 }
 
 # simple function for testing with/without inputs
 function cftest() {
-  FILETYPE=$(basename $PWD);
+  FILETYPE=$(basename $PWD)
 
   if [ "$1" ]; then
     # pass
-  else 
-    echo "missing filename to test";
+  else
+    echo "missing filename to test"
   fi
 
-  case $FILETYPE in 
-    "cpp")
-      ./"$1.exe"
-      ;;
-    "python")
-      python3 "$1.py"
-      ;;
-    "java")
-      java "$1"
-      ;;
-    *)
-      echo "invalid directory! \ngo to a language in codeforces";
-      return 1;;
+  case $FILETYPE in
+  "cpp")
+    ./"$1.exe"
+    ;;
+  "python")
+    python3 "$1.py"
+    ;;
+  "java")
+    java "$1"
+    ;;
+  *)
+    echo "invalid directory! \ngo to a language in codeforces"
+    return 1
+    ;;
   esac
 }
 
 # same as cftest, but with input file
 function cftesti() {
-  FILETYPE=$(basename $PWD);
+  FILETYPE=$(basename $PWD)
 
   if [ "$1" ]; then
     # pass
-  else 
-    echo "missing filename to test";
+  else
+    echo "missing filename to test"
   fi
 
-  case $FILETYPE in 
-    "cpp")
-      ./"$1.exe" < input.txt
-      ;;
-    "python")
-      python3 "$1.py" < input.txt
-      ;;
-    "java")
-      java "$1" < input.txt
-      ;;
-    *)
-      echo "invalid directory! \ngo to a language in codeforces";
-      return 1;;
+  case $FILETYPE in
+  "cpp")
+    ./"$1.exe" <input.txt
+    ;;
+  "python")
+    python3 "$1.py" <input.txt
+    ;;
+  "java")
+    java "$1" <input.txt
+    ;;
+  *)
+    echo "invalid directory! \ngo to a language in codeforces"
+    return 1
+    ;;
   esac
 }
 
 # simpler function for compiling cpp files
 function gpp() {
-  EXTENSION="cpp";
+  EXTENSION="cpp"
 
-  if [ "$1" ]; then 
-    g++ "$1.$EXTENSION" -o "$1.exe";
-    chmod +x "$1.exe";
-  else 
-    echo "missing filename to compile";
+  if [ "$1" ]; then
+    g++ "$1.$EXTENSION" -o "$1.exe"
+    chmod +x "$1.exe"
+  else
+    echo "missing filename to compile"
   fi
 }
