@@ -1,36 +1,40 @@
-require("telescope").load_extension('harpoon')
+require("telescope").load_extension("harpoon")
 
 require("harpoon").setup({
-    menu = {
-        width = vim.api.nvim_win_get_width(0) - 4,
-    }
+	menu = {
+		width = vim.api.nvim_win_get_width(0) - 4,
+	},
 })
 
 local nnoremap = Map.noremap("n")
 local harpoon = {
-  mark = require('harpoon.mark'),
-  ui = require('harpoon.ui'),
+	mark = require("harpoon.mark"),
+	ui = require("harpoon.ui"),
 }
 
 -- local functions for adding file and navigating
 local jump = function(n)
-  return function()
-    print('Harpooned to index ' .. n)
-    harpoon.ui.nav_file(n)
-  end
+	return function()
+		print("Harpooned to index " .. n)
+		harpoon.ui.nav_file(n)
+	end
 end
 
 local add = function()
-  harpoon.mark.add_file()
-  harpoon.ui.toggle_quick_menu()
-  print('Added file to harpoon')
+	harpoon.mark.add_file()
+	harpoon.ui.toggle_quick_menu()
+	print("Added file to harpoon")
 end
 
 -- key remaps
-nnoremap('<leader>h', harpoon.ui.toggle_quick_menu)
-nnoremap('<leader>mk', add, true)
-nnoremap('<leader>1', jump(1), true)
-nnoremap('<leader>2', jump(2), true)
-nnoremap('<leader>3', jump(3), true)
-nnoremap('<leader>4', jump(4), true)
-nnoremap('<leader>5', jump(5), true)
+nnoremap("<leader>h", harpoon.ui.toggle_quick_menu)
+nnoremap("<leader>mk", add, true)
+nnoremap("<leader>1", jump(1), true)
+nnoremap("<leader>2", jump(2), true)
+nnoremap("<leader>3", jump(3), true)
+nnoremap("<leader>4", jump(4), true)
+nnoremap("<leader>5", jump(5), true)
+nnoremap("<leader>6", jump(6), true)
+nnoremap("<leader>7", jump(7), true)
+nnoremap("<leader>8", jump(8), true)
+nnoremap("<leader>9", jump(9), true)
