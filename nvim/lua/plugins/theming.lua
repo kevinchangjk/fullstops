@@ -14,6 +14,8 @@ return {
 	-- greeter screen
 	{
 		"goolord/alpha-nvim",
+		lazy = false,
+		priority = 1000,
 		dependencies = {
 			"nvim-tree/nvim-web-devicons",
 			"nvim-lua/plenary.nvim",

@@ -1,16 +1,3 @@
-vim.g.barbar_auto_setup = false -- disable auto-setup
-
-require("barbar").setup({
-	-- Enables/disable clickable tabs
-	--  - left-click: go to buffer
-	--  - middle-click: delete buffer
-	clickable = false,
-
-	-- Excludes buffers from the tabline
-	exclude_ft = {},
-	exclude_name = {},
-})
-
 -- Default keybindings for barbar
 -- Note: Each of these are generated using the MacOS option key, together with another key.
 local map = vim.api.nvim_set_keymap

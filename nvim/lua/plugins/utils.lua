@@ -1,7 +1,12 @@
 -- useful utility
 return {
 	"mbbill/undotree",
-	"preservim/nerdtree",
+	{
+		"nvim-tree/nvim-tree.lua",
+		dependencies = {
+			"nvim-tree/nvim-web-devicons", -- OPTIONAL: for file icons
+		},
+	},
 	"ThePrimeagen/harpoon",
 	{
 		"romgrk/barbar.nvim",
@@ -13,12 +18,19 @@ return {
 			vim.g.barbar_auto_setup = false
 		end,
 		opts = {
-			-- lazy.nvim will automatically call setup for you. put your options here, anything missing will use the default:
-			-- animation = true,
-			-- insert_at_start = true,
-			-- …etc.
+			-- Enables/disable clickable tabs
+			--  - left-click: go to buffer
+			--  - middle-click: delete buffer
+			clickable = false,
+
+			-- Excludes buffers from the tabline
+			exclude_ft = {},
+			exclude_name = {},
+
+			config = function()
+				require("barbar").setup()
+			end,
 		},
-		version = "^1.0.0", -- optional: only update when a new 1.x version is released
 	},
 
 	-- smooth scrolling
