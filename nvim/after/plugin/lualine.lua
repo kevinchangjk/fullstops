@@ -1,11 +1,13 @@
+local custom_onedark = require("lualine.themes.onedark")
+
+custom_onedark.normal.c.bg = "#181b20"
+
 require("lualine").setup({
 	options = {
 		icons_enabled = true,
-		theme = "onedark-nvim",
+		theme = custom_onedark,
 		component_separators = { left = "", right = "" },
-		-- section_separators = { left = "", right = "" },
-    -- setting section_separators as anything but "" breaks the intro screen
-		section_separators = { left = "", right = "" },
+		section_separators = { left = "", right = "" },
 		always_divide_middle = true,
 		globalstatus = true,
 		refresh = {

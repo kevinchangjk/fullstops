@@ -1,7 +1,7 @@
 -- colorscheme & aesthetics
 return {
 	{
-		"ful1e5/onedark.nvim",
+		"navarasu/onedark.nvim",
 		lazy = false,
 		priority = 1000,
 	},
