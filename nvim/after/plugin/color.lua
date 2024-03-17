@@ -2,10 +2,10 @@
 require("onedark").setup({
 	style = "darker",
 
-
 	-- Overwrites color
 	-- Notably, for the message area / command line
 	highlights = {
+		["Visual"] = { bg = "$grey" },
 		["MsgArea"] = { bg = "$black" },
 		["ColorColumn"] = { bg = "$black" },
 		["NormalFloat"] = { bg = "$bg3" },
