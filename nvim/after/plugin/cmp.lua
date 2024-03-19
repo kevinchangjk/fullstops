@@ -46,6 +46,7 @@ cmp.setup({
 				fallback()
 			end
 		end, { "i", "s" }),
+		["<C-c>"] = cmp.mapping.abort(),
 	},
 })
 
