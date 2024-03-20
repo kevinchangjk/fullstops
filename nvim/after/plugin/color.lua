@@ -28,6 +28,7 @@ require("onedark").setup({
 		["TelescopeResultsBorder"] = { bg = "$bg2" },
 		["TelescopeSelection"] = { bg = "$grey" },
 		["TelescopeSelectionCaret"] = { bg = "$grey" },
+    ["TelescopePreviewLine"] = { bg = "$grey" },
 		["BufferTabpageFill"] = { bg = "$black" },
 		["TabLine"] = { bg = "$black" },
 	},
