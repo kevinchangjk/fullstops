@@ -4,11 +4,11 @@ local map = vim.api.nvim_set_keymap
 local opts = { noremap = true, silent = true }
 
 -- Move to previous/next
-map("n", "≤", "<Cmd>BufferPrevious<CR>", opts) -- option + ,
-map("n", "≥", "<Cmd>BufferNext<CR>", opts) -- option + .
+map("n", "¬", "<Cmd>BufferPrevious<CR>", opts) -- option + l
+map("n", "˙", "<Cmd>BufferNext<CR>", opts) -- option + h
 -- Re-order to previous/next
-map("n", "¯", "<Cmd>BufferMovePrevious<CR>", opts) -- option + <
-map("n", "˘", "<Cmd>BufferMoveNext<CR>", opts) -- option + >
+map("n", "∆", "<Cmd>BufferMovePrevious<CR>", opts) -- option + j
+map("n", "˚", "<Cmd>BufferMoveNext<CR>", opts) -- option + k
 -- Goto buffer in position...
 map("n", "¡", "<Cmd>BufferGoto 1<CR>", opts) -- option + 1, and so on.
 map("n", "™", "<Cmd>BufferGoto 2<CR>", opts)
@@ -33,7 +33,7 @@ map("n", "å", "<Cmd>BufferCloseAllButPinned<CR>", opts) -- option + a
 --                 :BufferCloseBuffersLeft
 --                 :BufferCloseBuffersRight
 -- Magic buffer-picking mode
-map("n", "∆", "<Cmd>BufferPick<CR>", opts) -- option + j
+map("n", "ø", "<Cmd>BufferPick<CR>", opts) -- option + o
 -- Sort automatically by...
 map("n", "<Space>bb", "<Cmd>BufferOrderByBufferNumber<CR>", opts)
 map("n", "<Space>bd", "<Cmd>BufferOrderByDirectory<CR>", opts)
