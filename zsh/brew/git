@@ -1,19 +1,19 @@
 #! /bin/zsh
 
 # managing changes
-alias gs="gitnu status" # git status
-alias ga="gitnu add"
-alias gaa="gitnu add --all"
-alias grs="gitnu restore"
-alias gd="gitnu diff"
-alias gds="gitnu diff --staged"
-alias gr="gitnu reset"
+alias gs="git-nu status" # git status
+alias ga="git-nu add"
+alias gaa="git-nu add --all"
+alias grs="git-nu restore"
+alias gd="git-nu diff"
+alias gds="git-nu diff --staged"
+alias gr="git-nu reset"
 alias gp="git push"
 alias gpu="git push -u origin HEAD"
 alias gpl="git pull"
 alias gplu="git pull upstream master"
 alias gplo="git pull origin master"
-alias gap="gitnu add -p"
+alias gap="git-nu add -p"
 alias gms="git merge --squash" # squash diff into one commit
 
 # git commit
@@ -37,10 +37,10 @@ function gca() {
 }
 
 # managing branches
-alias gco="gitnu checkout"
-alias gcob="gitnu checkout -b"
-alias gb="gitnu branch"
-alias gbd="gitnu branch -d"
+alias gco="git-nu checkout"
+alias gcob="git-nu checkout -b"
+alias gb="git-nu branch"
+alias gbd="git-nu branch -d"
 
 # git log
 function gl() {
@@ -50,7 +50,7 @@ function gl() {
 
 # the laziest git function ever
 function gq() {
-  gitnu add .
+  git-nu add .
   git commit -m ${1-"update"}
   git push
 }
