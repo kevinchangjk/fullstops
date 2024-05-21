@@ -4,9 +4,6 @@
 alias vim=$NVIM
 alias v=$NVIM
 
-# temp
-alias ssd="ssh deck@192.168.0.83"
-
 # general
 alias ct="printf '\033[2J\033[3J\033[1;1H'" # clear terminal
 alias gup="pass git push"
