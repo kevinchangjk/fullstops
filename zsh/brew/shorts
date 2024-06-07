@@ -16,6 +16,7 @@ alias yd="yarn dev"
 alias zr="exec $SHELL -l" # reloads shell
 alias ip="curl ifconfig.me"
 alias fdir="open /System/Library/CoreServices/Finder.app"
+alias icat="kitty +kitten icat"
 
 # fuzzy finder
 alias ff='fzf -m -1 -0 --no-bold'
