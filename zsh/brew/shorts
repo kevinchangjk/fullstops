@@ -110,6 +110,7 @@ function cftest() {
     # pass
   else
     echo "missing filename to test"
+    return 1
   fi
 
   case $FILETYPE in
@@ -137,6 +138,7 @@ function cftesti() {
     # pass
   else
     echo "missing filename to test"
+    return 1
   fi
 
   case $FILETYPE in
