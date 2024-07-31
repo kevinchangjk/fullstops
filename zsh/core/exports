@@ -22,3 +22,6 @@ export HADOOP_ROOT_LOGGER="WARN,console"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# tstock
+export ALPHAVANTAGE_API_KEY="27HKIKZ2ZI4WC89B"

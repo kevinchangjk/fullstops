@@ -49,6 +49,9 @@ alias cgb="cargo build"
 alias cgt="cargo test"
 alias cgu="cargo update"
 
+# stonk commands
+alias stonk="tstock -w"
+
 # NUS specific
 alias snus="ssh-copy-id kevincjk@stu.comp.nus.edu.sg"
 
