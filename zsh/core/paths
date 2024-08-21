@@ -5,6 +5,9 @@ path+=$HOME/.local/bin
 path+=/opt/local/bin
 path+=$HOME/.yarn/bin
 
+# maven
+path+=/$HOME/.apache-maven-3.9.9/bin
+
 # golang
 export PATH=$PATH:$(go env GOBIN)
 

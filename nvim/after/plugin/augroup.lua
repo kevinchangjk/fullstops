@@ -11,23 +11,20 @@ local navGrp = api.nvim_create_augroup("NavGrp", { clear = true })
 --   })
 
 -- go to last loc when opening a buffer
-api.nvim_create_autocmd(
-  "BufReadPost", {
-    command = [[if line("'\"") > 1 && line("'\"") <= line("$") | execute "normal! g`\"" | endif]],
-    group = readWriteGrp,
-  })
+api.nvim_create_autocmd("BufReadPost", {
+	command = [[if line("'\"") > 1 && line("'\"") <= line("$") | execute "normal! g`\"" | endif]],
+	group = readWriteGrp,
+})
 
 -- windows to close with "q"
-api.nvim_create_autocmd(
-  "FileType", {
-    pattern = { "help", "startuptime", "qf", "lspinfo" },
-    command = [[nnoremap <buffer><silent> q :close<CR>]],
-    group = navGrp,
-  })
+api.nvim_create_autocmd("FileType", {
+	pattern = { "help", "startuptime", "qf", "lspinfo" },
+	command = [[nnoremap <buffer><silent> q :close<CR>]],
+	group = navGrp,
+})
 
-api.nvim_create_autocmd(
-  "FileType", {
-    pattern = "man",
-    command = [[nnoremap <buffer><silent> q :quit<CR>]],
-    group = navGrp,
-  })
+api.nvim_create_autocmd("FileType", {
+	pattern = "man",
+	command = [[nnoremap <buffer><silent> q :quit<CR>]],
+	group = navGrp,
+})

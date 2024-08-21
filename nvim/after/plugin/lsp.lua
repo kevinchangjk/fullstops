@@ -62,7 +62,8 @@ lsp.rust_analyzer.setup(baseconfig({
 	},
 }))
 
--- java: refer to ftplugin/java.lua
+-- java
+lsp.jdtls.setup(baseconfig())
 
 -- solidity
 lsp.solidity_ls.setup(baseconfig())

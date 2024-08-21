@@ -1,4 +1,7 @@
 -- Provides the Format, FormatWrite, FormatLock, and FormatWriteLock commands
+
+local util = require("formatter.util")
+
 require("formatter").setup({
 	-- Enable or disable logging
 	logging = true,
@@ -62,9 +65,20 @@ require("formatter").setup({
 		-- 	require("formatter.filetypes.python").autopep8,
 		-- },
 
-		-- java = {
-		-- 	require("formatter.filetypes.java").google_java_format,
-		-- },
+		java = {
+			require("formatter.filetypes.java").google_java_format,
+
+			function()
+				return {
+					exe = "google-java-format",
+					args = {
+						util.escape_path(util.get_current_buffer_file_path()),
+						"--replace",
+					},
+					stdin = true,
+				}
+			end,
+		},
 
 		sh = {
 			require("formatter.filetypes.sh").shfmt,
