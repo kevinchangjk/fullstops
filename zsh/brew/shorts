@@ -166,7 +166,7 @@ function gpp() {
   EXTENSION="cpp"
 
   if [ "$1" ]; then
-    g++ "$1.$EXTENSION" -o "$1.exe"
+    g++ -std=c++11 "$1.$EXTENSION" -o "$1.exe"
     chmod +x "$1.exe"
   else
     echo "missing filename to compile"
