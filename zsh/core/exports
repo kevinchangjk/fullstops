@@ -3,6 +3,10 @@
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
+# clang
+export CC=/opt/homebrew/opt/llvm/bin/clang
+export CXX="/opt/homebrew/opt/llvm/bin/clang++"
+
 # nvim stuff
 export XDG_CONFIG_HOME="$HOME/.config"
 export NVIM="nvim"
