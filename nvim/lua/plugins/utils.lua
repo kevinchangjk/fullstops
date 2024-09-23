@@ -44,6 +44,9 @@ return {
 	"nvim-treesitter/nvim-treesitter",
 	"nvim-treesitter/nvim-treesitter-context",
 
+	-- file explorer
+	{ "prichrd/netrw.nvim", opts = {} },
+
 	-- copilot
 	{
 		"zbirenbaum/copilot.lua",

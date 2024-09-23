@@ -1,7 +1,6 @@
 local api = vim.api
 
 local readWriteGrp = api.nvim_create_augroup("ReadWrite", { clear = true })
-local nusModGrp = api.nvim_create_augroup("NusMod", { clear = true })
 local navGrp = api.nvim_create_augroup("NavGrp", { clear = true })
 
 -- indent files properly upon write
