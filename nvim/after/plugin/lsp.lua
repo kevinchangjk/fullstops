@@ -69,7 +69,7 @@ lsp.jdtls.setup(baseconfig())
 lsp.solidity_ls.setup(baseconfig())
 
 -- typescript/javascript
-lsp.tsserver.setup(baseconfig())
+lsp.ts_ls.setup(baseconfig())
 
 -- c
 lsp.clangd.setup(baseconfig())
