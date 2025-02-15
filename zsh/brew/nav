@@ -26,6 +26,7 @@ export ONE_NUS="$HOME/'OneDrive - National University of Singapore'"
 
 # doc_start
 alias 22="v $ZSH_DOTS/brew/nav"
+alias 23="ssh cs3223dz@xlogin.comp.nus.edu.sg"
 alias 2.="cd $DOTS"
 alias 2a="cd $ARCHIVE"
 alias 2c="cd $HOME/.config"
