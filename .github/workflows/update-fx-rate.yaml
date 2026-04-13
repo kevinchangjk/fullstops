@@ -25,7 +25,7 @@ jobs:
           python-version: "3.12"
 
       - name: Install dependencies
-        run: pip install -r dots/notion/requirements.txt
+        run: pip install -r notion/requirements.txt
 
       - name: Update USD/SGD rate in Notion
-        run: python dots/notion/update_fx_rate.py
+        run: python notion/update_fx_rate.py
