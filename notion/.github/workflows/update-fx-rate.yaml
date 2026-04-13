@@ -1,0 +1,31 @@
+name: Update FX Rate
+
+on:
+  schedule:
+    - cron: "5 8 * * *"
+      timezone: "Asia/Singapore"
+  workflow_dispatch:
+
+jobs:
+  update-fx-rate:
+    runs-on: ubuntu-latest
+
+    env:
+      NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
+      NOTION_PAGE_ID: ${{ secrets.NOTION_PAGE_ID }}
+      NOTION_RATE_PROPERTY: ${{ secrets.NOTION_RATE_PROPERTY }}
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r dots/notion/requirements.txt
+
+      - name: Update USD/SGD rate in Notion
+        run: python dots/notion/update_fx_rate.py
