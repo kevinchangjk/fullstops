@@ -2,7 +2,7 @@ name: Update FX Rate
 
 on:
   schedule:
-    - cron: "5 8 * * *"
+    - cron: "0 8 * * *"
       timezone: "Asia/Singapore"
   workflow_dispatch:
 
