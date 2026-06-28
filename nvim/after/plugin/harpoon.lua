@@ -23,7 +23,7 @@ end
 local add = function()
 	harpoon.mark.add_file()
 	harpoon.ui.toggle_quick_menu()
-	print("Added file to harpoon")
+	print("Added file to Harpoon")
 end
 
 -- key remaps

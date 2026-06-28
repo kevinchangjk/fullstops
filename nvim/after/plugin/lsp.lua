@@ -1,82 +1,90 @@
 require("mason").setup()
-require("mason-lspconfig").setup()
 
-local lsp = require("lspconfig")
+require("mason-lspconfig").setup({
+	-- We manually enable servers below with vim.lsp.enable().
+	-- This avoids mason-lspconfig auto-enabling servers before your custom config is applied.
+	automatic_enable = false,
+})
+
 local baseconfig = require("core.lspconfig")
 
 -- lua
-lsp.lua_ls.setup(baseconfig({
-	settings = {
-		Lua = {
-			runtime = {
-				-- Tell the language server which version of Lua you're using (most likely LuaJIT in the case of Neovim)
-				version = "LuaJIT",
-			},
-			diagnostics = {
-				-- Get the language server to recognize the `vim` global
-				globals = { "vim", "use" },
-			},
-			workspace = {
-				-- Make the server aware of Neovim runtime files
-				library = vim.api.nvim_get_runtime_file("", true),
-			},
-			-- Do not send telemetry data containing a randomized but unique identifier
-			telemetry = {
-				enable = false,
-			},
-		},
-	},
-}))
-
--- bash
-lsp.bashls.setup(baseconfig())
-
--- json
-lsp.jsonls.setup(baseconfig())
-
--- markdown
-lsp.marksman.setup(baseconfig())
-
--- python
-lsp.pylsp.setup(baseconfig({
-	settings = {
-		pylsp = {
-			plugins = {
-				pycodestyle = {
-					ignore = { "W292", "W293", "W391" },
-					maxLineLength = 100,
+vim.lsp.config(
+	"lua_ls",
+	baseconfig({
+		settings = {
+			Lua = {
+				runtime = {
+					version = "LuaJIT",
+				},
+				diagnostics = {
+					globals = { "vim", "use" },
+				},
+				workspace = {
+					library = vim.api.nvim_get_runtime_file("", true),
+				},
+				telemetry = {
+					enable = false,
 				},
 			},
 		},
-	},
-}))
+	})
+)
+
+-- bash
+vim.lsp.config("bashls", baseconfig())
+
+-- json
+vim.lsp.config("jsonls", baseconfig())
+
+-- markdown
+vim.lsp.config("marksman", baseconfig())
+
+-- python
+vim.lsp.config(
+	"pylsp",
+	baseconfig({
+		settings = {
+			pylsp = {
+				plugins = {
+					pycodestyle = {
+						ignore = { "W292", "W293", "W391" },
+						maxLineLength = 100,
+					},
+				},
+			},
+		},
+	})
+)
 
 -- rust
-lsp.rust_analyzer.setup(baseconfig({
-	settings = {
-		rust = {
-			unstable_features = true,
-			build_on_save = false,
-			all_features = true,
+vim.lsp.config(
+	"rust_analyzer",
+	baseconfig({
+		settings = {
+			["rust-analyzer"] = {
+				cargo = {
+					allFeatures = true,
+				},
+				checkOnSave = false,
+			},
 		},
-	},
-}))
+	})
+)
 
 -- java
-lsp.jdtls.setup(baseconfig())
-
--- solidity
-lsp.solidity_ls.setup(baseconfig())
+vim.lsp.config("jdtls", baseconfig())
 
 -- typescript/javascript
-lsp.ts_ls.setup(baseconfig())
+vim.lsp.config("ts_ls", baseconfig())
 
--- c
-lsp.clangd.setup(baseconfig())
+-- c/c++
+vim.lsp.config("clangd", baseconfig())
 
 -- sql
-lsp.sqlls.setup(baseconfig({
-	settings = {
+vim.lsp.config(
+	"sqlls",
+	baseconfig({
 		cmd = {
 			"sql-language-server",
 			"up",
@@ -85,9 +93,22 @@ lsp.sqlls.setup(baseconfig({
 			"sql",
 			"mysql",
 		},
-	},
-}))
+	})
+)
 
-local M = baseconfig()
+-- go
+vim.lsp.config("gopls", baseconfig())
 
-return M
+vim.lsp.enable({
+	"lua_ls",
+	"bashls",
+	"jsonls",
+	"marksman",
+	"pylsp",
+	"rust_analyzer",
+	"jdtls",
+	"ts_ls",
+	"clangd",
+	"sqlls",
+	"gopls",
+})

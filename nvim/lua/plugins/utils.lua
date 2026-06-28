@@ -1,4 +1,4 @@
--- useful utility
+-- useful utility for the editor itself
 return {
 	"mbbill/undotree",
 	{
@@ -43,27 +43,4 @@ return {
 	-- syntax highlighting
 	"nvim-treesitter/nvim-treesitter",
 	"nvim-treesitter/nvim-treesitter-context",
-
-	-- file explorer
-	{ "prichrd/netrw.nvim", opts = {} },
-
-	-- copilot
-	{
-		"zbirenbaum/copilot.lua",
-		cmd = "Copilot",
-		event = "InsertEnter",
-		config = function()
-			require("copilot").setup({
-				suggestion = { enabled = false },
-				panel = { enabled = false },
-			})
-		end,
-	},
-	{
-		"zbirenbaum/copilot-cmp",
-		config = function()
-			require("copilot_cmp").setup()
-		end,
-	},
-	{ "AndreM222/copilot-lualine" },
 }

@@ -1,57 +1,97 @@
-require'nvim-treesitter.configs'.setup {
-  -- A list of parser names, or "all"
-  ensure_installed = {
-      "bash",
-      "c",
-      "cpp",
-      "css",
-      "dockerfile",
-      -- "gitignore",
-      "go",
-      "html",
-      "java",
-      "javascript",
-      "json",
-      "latex",
-      "lua",
-      "make",
-      "markdown",
-      "proto",
-      "python",
-      "rust",
-      "typescript",
-      "solidity",
-      "sql",
-      "vim",
-      "yaml"
-    },
+local treesitter = require("nvim-treesitter")
 
-  -- Install parsers synchronously (only applied to `ensure_installed`)
-  sync_install = false,
+treesitter.setup({
+	-- Default is stdpath("data") .. "/site".
+	-- Keeping it explicit makes parser location predictable.
+	install_dir = vim.fn.stdpath("data") .. "/site",
+})
 
-  -- Automatically install missing parsers when entering buffer
-  auto_install = true,
-
-  -- List of parsers to ignore installing (for "all")
-  ignore_install = {},
-
-  ---- If you need to change the installation directory of the parsers (see -> Advanced Setup)
-  -- parser_install_dir = "/some/path/to/store/parsers", -- Remember to run vim.opt.runtimepath:append("/some/path/to/store/parsers")!
-
-  highlight = {
-    -- `false` will disable the whole extension
-    enable = true,
-
-    -- NOTE: these are the names of the parsers and not the filetype. (for example if you want to
-    -- disable highlighting for the `tex` filetype, you need to include `latex` in this list as this is
-    -- the name of the parser)
-    -- list of language that will be disabled
-    disable = {},
-
-    -- Setting this to true will run `:h syntax` and tree-sitter at the same time.
-    -- Set this to `true` if you depend on 'syntax' being enabled (like for indentation).
-    -- Using this option may slow down your editor, and you may see some duplicate highlights.
-    -- Instead of true it can also be a list of languages
-    additional_vim_regex_highlighting = false,
-  },
+local parsers = {
+	"bash",
+	"c",
+	"cpp",
+	"css",
+	"dockerfile",
+	"go",
+	"html",
+	"java",
+	"javascript",
+	"json",
+	"latex",
+	"lua",
+	"make",
+	"markdown",
+	"markdown_inline",
+	"proto",
+	"python",
+	"rust",
+	"typescript",
+	"solidity",
+	"sql",
+	"vim",
+	"vimdoc",
+	"yaml",
 }
+
+-- Installs missing parsers asynchronously.
+-- This is a no-op for parsers that are already installed.
+treesitter.install(parsers)
+
+-- Filetypes where Tree-sitter should start.
+-- These are filetypes, not always parser names:
+--   tex -> latex parser
+--   sh/zsh -> bash parser
+--   make -> make parser
+local filetypes = {
+	"bash",
+	"sh",
+	"zsh",
+	"c",
+	"cpp",
+	"css",
+	"dockerfile",
+	"go",
+	"html",
+	"java",
+	"javascript",
+	"json",
+	"tex",
+	"lua",
+	"make",
+	"markdown",
+	"proto",
+	"python",
+	"rust",
+	"typescript",
+	"typescriptreact",
+	"javascriptreact",
+	"solidity",
+	"sql",
+	"vim",
+	"help",
+	"yaml",
+}
+
+vim.api.nvim_create_autocmd("FileType", {
+	pattern = filetypes,
+	callback = function(args)
+		local bufnr = args.buf
+
+		-- Highlighting.
+		-- pcall prevents startup errors if a parser is unavailable/misinstalled.
+		pcall(vim.treesitter.start, bufnr)
+
+		-- Indentation.
+		-- New nvim-treesitter no longer enables this via setup().
+		pcall(function()
+			vim.bo[bufnr].indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+		end)
+
+		-- Folding.
+		-- Disabled by default to avoid changing your current fold behavior.
+		-- Uncomment if you want Tree-sitter folds.
+		--
+		-- vim.wo.foldmethod = "expr"
+		-- vim.wo.foldexpr = "v:lua.vim.treesitter.foldexpr()"
+	end,
+})

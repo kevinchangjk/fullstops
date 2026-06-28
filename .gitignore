@@ -1,5 +1,5 @@
 .DS_Store
-nvim/plugin/
 nvim/undodir/
+nvim/configs/vale/styles/*
 **/.venv
 **/.env

@@ -1,7 +1,7 @@
 -- Miscellaneous plugins
 return {
 
-	-- markdown
+	-- markdown preview
 	{
 		"iamcco/markdown-preview.nvim",
 		cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
@@ -21,7 +21,9 @@ return {
 		"aklt/plantuml-syntax",
 	} },
 
-	-- misc stuff
+	-- wakatime: coding tracker and analytics
 	"wakatime/vim-wakatime",
+
+	-- inverter
 	"nguyenvukhang/nvim-toggler",
 }

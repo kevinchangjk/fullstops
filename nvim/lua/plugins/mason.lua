@@ -8,7 +8,10 @@ return {
 	{ "rcarriga/nvim-dap-ui", dependencies = {
 		"mfussenegger/nvim-dap",
 	} },
-	"mfussenegger/nvim-lint",
+	{
+		"mfussenegger/nvim-lint",
+		event = { "BufReadPre", "BufNewFile" },
+	},
 	"mhartington/formatter.nvim",
 	"mfussenegger/nvim-jdtls",
 }

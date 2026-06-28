@@ -52,7 +52,3 @@ nnoremap("<c-j>", ":wincmd j<cr>")
 nnoremap("<c-k>", ":wincmd k<cr>")
 nnoremap("<c-l>", ":wincmd l<cr>")
 nnoremap("<c-g>", ":wincmd =<cr>")
-
--- jump to parent enclosing parantheses
-nnoremap("[[", ":call searchpair('\\[', '', '\\]', 'b')<cr>")
-nnoremap("]]", ":call searchpair('\\[', '', '\\]')<cr>")

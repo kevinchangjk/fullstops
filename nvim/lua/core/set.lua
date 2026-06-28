@@ -3,6 +3,7 @@ local VIM_CONFIG = HOME .. "/.config/nvim"
 local opt = vim.opt
 
 -- main settings for nvim
+vim.g.mapleader = " "
 opt.ruler = true
 opt.relativenumber = true
 opt.nu = true
